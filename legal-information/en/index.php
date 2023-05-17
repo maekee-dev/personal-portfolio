@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php require_once $_SERVER['DOCUMENT_ROOT'].'/templates/head.html'; ?>
+    <link rel="stylesheet" href="/assets/css/legal-information.min.css">
+    <title>Diego Mantegazza | Legal Information</title>
+    <meta name="robots" content="noindex">
+</head>
+<body>
+    <?php require_once $_SERVER['DOCUMENT_ROOT'].'/templates/layouts/header.html'; ?>
+    <main>
+        <div class="info-title">
+            <h1>PRIVACY POLICY & COOKIES</h1>
+        </div>
+        <div class="info-container">
+            <div class="info-paragraph">
+                <h2>
+                    Information regarding the site's privacy policy
+                </h2>
+                <p> 
+                    This section contains information on how the 
+                    of management of the site 
+                    <a href="https://diegomantegazza.me">diegomantegazza.me</a> 
+                    In reference to the processing of user data. This information has value 
+                    also for the purposes of art. 
+                    13 of Legislative Decree no. 196/2003, Code regarding the protection of personal data, and 
+                    for the purposes of art. 13 of EU Regulation no. 2016/679, on the protection of 
+                    individuals with regard to the processing of personal data and on the free 
+                    circulation of such data, for parties interacting with the site and is 
+                    reachable at the address
+                    <a href="https://diegomantegazza.me/legal-information/it/">diegomantegazza.me/legal-information/en/</a>. 
+                    The policy is real only for this site and not also for other websites 
+                    possibly consulted by the user through links contained therein.
+                </p>
+                <p> 
+                    The purpose of this document 
+                    is to provide guidance regarding the manner, timing and nature of the information that data controllers 
+                    must provide to users when connecting to the web page, 
+                    regardless of the purposes of the connection itself, according to Italian and European legislation.
+                </p>
+                <p>
+                    The statement may be subject to change due to the introduction of new regulations in this regard, we invite, 
+                    therefore, the user to check this page periodically. The last update 
+                    dates back to May 16, 2023.
+                </p>
+            </div>  
+            <div class="info-paragraph">
+                <h2>
+                    Owner and data controller
+                </h2>
+                <p>
+                    The data controller is the natural or legal person, public authority, service or 
+                    other body which, individually or jointly with others, determines the purposes and means of processing 
+                    of personal data. It also deals with security profiles. With regard to this website the 
+                    data controller is represented by Diego Mantegazza. For any clarification 
+                    or exercise of the user's rights, it is possible to contact the following email address:
+                    <a href="mailto:hello@diegomantegazza.me">hello@diegomantegazza.me</a>.
+                </p>
+                <p>
+                    The controller is the natural or legal person, public authority, service or 
+                    other body that processes personal data on behalf of the controller. Pursuant to Art. 
+                    28 of EU Regulation No. 2016/679, upon appointment by the data controller, the data processor of the 
+                    data of the website is Diego Mantegazza.
+                </p>
+            </div>
+            <div class="info-paragraph">
+                <h2>
+                    Cookies
+                </h2>
+                <p></p>
+                <p>
+                    This website does not use third-party or profiling cookies, nor technical cookies.
+                </p>
+            </div>
+            <div class="info-paragraph">
+                <h2>
+                    Methods of data processing
+                </h2>
+                <p>
+                    This site does not collect any personal data.
+                </p>
+                <p>
+                    For security purposes (spam filters, firewalls, virus detection) the data automatically recorded by the web provider may possibly include 
+                    also personal data such as IP address, which could be used, in accordance with relevant laws, for the purpose of blocking attempts to 
+                    damage to the site itself or to harm other users or harmful or criminal activities. Such data are never used for 
+                    user identification or profiling, but only for the purpose of protecting the site and its users, such information will be used according to the 
+                    legitimate interests of the owner. Data used for security purposes (blocking attempts to damage the site) are kept for the time 
+                    strictly necessary to achieve the previously stated purpose.
+                </p>
+                <p>
+                    The optional, explicit and voluntary sending of electronic mail to the addresses indicated on this site involves the subsequent acquisition of the address 
+                    of the sender, necessary to respond to requests, as well as any other personal data included in the message.
+                </p>
+            </div>
+            <div class="info-paragraph">
+                <h2>
+                    User Rights
+                </h2>
+                <p>
+                    This website aims to inform the user about the existence of the rights listed in Art. 13 co. 2 of the 
+                    EU Regulation of 2016/679. In particular
+                    <ul>
+                        <li>
+                            Of the data subject's right to ask the controller for access to personal data (Art. 15 
+                            EU Regulation), their updating (art. 7, co. 3, lett. a D.lgs 196/2003), their 
+                            rectification (art. 16 EU Regulation), integration (art. 7, co. 3 lett. a D.lgs 196/2003), 
+                            the limitation of the processing concerning him/her (art. 18 EU Regulation) or to oppose, for 
+                            legitimate reasons, to their processing (art. 21 EU Regulation), as well as the right to the portability 
+                            of the data (art. 20 EU Regulation);
+                        </li>
+                        <li>
+                            of the right to request the deletion (Art. 17 EU Regulation), transformation into an 
+                            anonymous form or the blocking of data processed in violation of the law, including data whose storage is not 
+                            necessary to store in relation to the purposes for which the data were collected or 
+                            subsequently processed (art. 7 co. 3, lett. b of Legislative Decree 196/2003);
+                        </li>
+                        <li>
+                            Of the right to obtain certification that the operations of updating, rectification, 
+                            integration of data, cancellation, blocking of data, transformation, have been brought to the 
+                            knowledge, also with regard to their content, of those to whom the data have been 
+                            communicated or disseminated, except where this proves impossible or involves 
+                            an employment of means manifestly disproportionate to the protected right (art. 7 co. 3, 
+                            lett. c of Legislative Decree 196/2003).
+                        </li>
+                    </ul>
+                </p>
+                <p>
+                    Requests can be addressed to the data controller via the email address
+                    <a href="mailto:hello@diegomantegazza.me">hello@diegomantegazza.me</a>
+                    (without formalities) or using the template provided by the 
+                    <a href="https://www.garanteprivacy.it/home">GPDP</a> (Garante per la Protezione dei Dati Personali).
+                </p>
+                <p>
+                    Where processing is based on Art. 6 para. 1 letter A (express consent to use) 
+                    or on Art. 9 par. 2 letter A (express consent to use of genetic data, biometric data, 
+                    relating to health, revealing religious or philosophical beliefs or trade union membership, revealing 
+                    reveal racial or ethnic origin, political opinions) the user has the right to revoke the 
+                    consent at any time without affecting the lawfulness of the processing based on the consent 
+                    given before the revocation
+                </p>
+                <p>
+                    Likewise, in case of violation of the regulations, the user has the right to file a complaint 
+                    with the Guarantor for the Protection of Personal Data, as the authority in charge of controlling the 
+                    processing in the Italian State.
+                </p>
+                <p>
+                    For a more detailed examination of your rights, see Art. 15 et seq. Of 
+                    EU Regulation 2016/679 and art. 7 of Legislative Decree 196/2003.
+                </p>
+            </div>
+            <div class="info-paragraph">
+                <h2>
+                    Security of the data provided
+                </h2>
+                <p>
+                    This site processes user data lawfully and fairly, taking appropriate 
+                    security measures to prevent unauthorized access, disclosure, modification or destruction 
+                    unauthorized data. The processing is carried out by means of computer and/or telematic tools, 
+                    with organizational methods and logics strictly related to the indicated purposes.
+                </p>
+                <p>
+                    In addition to the owner, in some cases, categories of appointees involved 
+                    in the organization of the site (administrative staff, marketing, commercial, legal, administrators 
+                    of system) or external subjects such as (as third party technical service providers, postal couriers, 
+                    hosting providers, IT companies, communication agencies).
+                </p>
+            </div>
+            <div class="info-paragraph">
+                <p>
+                    This policy has been translated directly from the policy found at
+                    <a href="/legal-information/it/">diegomantegazza.me/legal-information/it/</a>.
+                    Therefore there may be some errors and users are encouraged to review the original policy.
+                </p>
+                <p>Versione in italiano <a href="/legal-information/it/">qui</a>.</p>
+            </div>
+        </div>
+    </main>
+    <?php require_once $_SERVER['DOCUMENT_ROOT'].'/templates/layouts/footer.html'; ?>
+    <script src="/assets/js/lib/gsap.min.js"></script>
+    <script src="/assets/js/general.min.js"></script>
+</body>
+</html>

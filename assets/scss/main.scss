@@ -1,0 +1,570 @@
+@font-face {
+    font-family: 'Inter';
+    src: url(/assets/fonts/Inter/static/Inter-Regular.ttf);
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url(/assets/fonts/Inter/static/Inter-Medium.ttf);
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url(/assets/fonts/Inter/static/Inter-SemiBold.ttf);
+    font-weight: 600;
+    font-display: swap;
+}
+  
+@font-face {
+    font-family: 'ClashGrotesk';
+    src: url(/assets/fonts/ClashGrotesk/ClashGrotesk-Regular.woff2) format('woff2'),
+         url(/assets/fonts/ClashGrotesk/ClashGrotesk-Regular.woff) format('woff'),
+         url(/assets/fonts/ClashGrotesk/ClashGrotesk-Regular.ttf) format('truetype');
+         font-weight: 400;
+         font-display: swap;
+         font-style: normal;
+}
+
+@font-face {
+    font-family: 'ClashGrotesk';
+    src: url(/assets/fonts/ClashGrotesk/ClashGrotesk-Medium.woff2) format('woff2'),
+         url(/assets/fonts/ClashGrotesk/ClashGrotesk-Medium.woff) format('woff'),
+         url(/assets/fonts/ClashGrotesk/ClashGrotesk-Medium.ttf) format('truetype');
+         font-weight: 500;
+         font-display: swap;
+         font-style: normal;
+}
+
+$color-text-1: #FFFFFF;
+$color-text-2: #A8A8A8;
+$color-style-1: #FFE13B;
+$color-style-2: #202020;
+$color-style-3: #434343;
+$color-background: #0E0E0E;
+
+$color-style-1-hover: #fdd909;
+$color-style-2-hover: #2B2B2B;
+$color-style-3-hover: #545454;
+
+$text-paragraph-xl: 1.5rem; //24px
+$text-paragraph-lg: 1.25rem; //20px
+$text-paragraph-md: 1.125rem; //18px
+$text-paragraph-sm: 1rem; //16px
+$text-paragraph-xs: .875rem; //14px
+
+$text-title-xxl: 9rem; //128px
+$text-title-xl: 6rem; //96px
+$text-title-lg: 4.5rem; //72px
+$text-title-md: 3rem; //48px
+$text-title-sm: 2.625rem; //42px
+$text-title-xs: 2rem; //32px
+
+$padding-normal: 5vw;
+$section-margin: 8rem;
+
+$breakpoint-desktop: 1921px;
+$breakpoint-laptop: 1440px;
+$breakpoint-tablet-lg: 1024px;
+$breakpoint-tablet-sm: 769px;
+$breakpoint-mobile: 496px;
+$breakpoint-responsive: 320px;
+
+$text-regular: 400;
+$text-medium: 500;
+$text-semibold: 600;
+
+// SASS MIXINS 
+
+@mixin center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin section-pad{
+    width: 100%;
+    padding: 0 $padding-normal;
+    max-width: 1920px;
+}
+
+@mixin inline-link{
+    padding: .02rem .2rem;
+    border-radius: 4px;
+    background-color: $color-style-2;
+}
+
+@mixin full-absolute{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@mixin hover{
+    @media (hover: hover) and (pointer: fine){
+        @content
+    }
+}
+
+@mixin mobile-card-effect{
+    background-color: rgba(32, 32, 32, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.4px);
+    -webkit-backdrop-filter: blur(3.4px);
+    border: 1px solid rgba(32, 32, 32, 0.37);
+}
+
+@mixin cta($color, $color-hover, $text: true, $scale: false){
+    padding: .875rem 1.25rem;
+    background-color: $color;
+    border-radius: 8px;
+    gap: .8rem;
+    font-size: $text-paragraph-sm;
+    transition: background-color 400ms ease;
+    transition: transform 200ms ease;
+    width: fit-content;
+    @include center;
+    img{
+        transition: transform 200ms ease;
+    }
+    @include hover{
+        &:hover{
+            background-color: $color-hover;
+            @if $scale == true { transform: scale(1.05) };
+            img{
+                transform: rotate(45deg);
+            }
+        }
+    }
+    @if $text == true {
+        color: $color-background;
+        font-weight: $text-semibold;
+    } @else {
+        color: $color-text-1;
+        font-weight: $text-medium;
+    }
+}
+
+// GENERAL CONFIG
+
+*,::after,::before{
+    box-sizing: border-box;
+}
+
+::-moz-selection{
+    color: $color-background;
+    background: $color-style-1;
+}
+
+::selection{
+    color: $color-background;
+    background: $color-style-1;
+}
+
+::-webkit-scrollbar{
+    width: .7rem;
+}
+  
+::-webkit-scrollbar-track{
+    background: $color-style-2;
+}
+  
+::-webkit-scrollbar-thumb{
+    background: $color-style-1;
+}
+  
+::-webkit-scrollbar-thumb:hover{
+    background: $color-style-1-hover;
+}
+    
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    background-color: $color-background;
+    background-image: url(/assets/img/background-noise.png);
+    background-repeat: repeat;
+    overflow-x: hidden;
+    color:#fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 320px;
+    p{
+        overflow-wrap: break-word;
+    }
+    a{
+        text-decoration:none;
+        color:inherit;
+    }
+}
+
+@media screen and (max-width: $breakpoint-tablet-lg) {
+    body{
+        background-image: none;
+    }
+}
+
+@media screen and (max-width: $breakpoint-responsive) {
+    body{
+        overflow-x: scroll;
+    }
+}
+
+@include hover{
+    .cursor{
+        position: fixed;
+        width: 10px;
+        height: 10px;
+        margin-left: -5px;
+        margin-top: -5px;
+        border-radius: 50%;
+        background-color: $color-style-1;
+        border: 1px solid $color-style-1;
+        transition: transform .3s ease;
+        transform-origin: center center;
+        pointer-events: none;
+        z-index: 1000;
+        //mix-blend-mode: difference;
+    } 
+    .grow, .grow-small{
+        transform: scale(8);
+        margin-left: -6px;
+        background-color: white;
+        mix-blend-mode: difference;
+
+    }   
+    .grow-small{
+        transform: scale(3);
+        border: 1px solid $color-style-2;
+        background-color: rgba($color: #000000, $alpha: .0);
+        mix-blend-mode: difference;
+    }
+}
+
+// HEADER
+
+header{
+    width: 100%;
+    max-width: 1920px;
+}
+
+.header-desktop{
+    width: 100%;
+    padding: 2.5rem $padding-normal;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .logo{
+        img{
+            width: 48px;
+            height: 33px;
+        }
+    }
+    nav{
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        color: $color-text-1;
+        .nav-link{
+            padding: .75rem 1.5rem;
+            font-weight: $text-semibold;
+            font-size: $text-paragraph-xs;
+            border-radius: 8px;
+            transition: 200ms ease;
+            @include hover{
+                &:hover{
+                    background-color: $color-style-2;
+                }
+            }
+        }
+        .nav-cta{
+            @include cta($color-style-1, $color-style-1-hover, true, true);
+            font-weight: $text-semibold;
+            font-size: $text-paragraph-xs;
+        }
+    }
+}
+
+.header-mobile{
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: $color-background;
+    border-left: 1px solid $color-style-2;
+    padding: 2.5rem $padding-normal;
+    display: none;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2rem;
+    width: 300px;
+    height: 100vh;
+    min-height: fit-content;
+    z-index: 100;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    .trigger-container{
+        height: 45px;
+        @include center;
+        margin-bottom: 2rem;
+    }
+    a{
+        padding: .5rem 1rem;
+        border-radius: 8px;
+        font-size: $text-paragraph-md;
+    }
+    .link{
+        border: 1px solid $color-text-1;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-right: .5rem;
+    }
+}
+
+.mobile-trigger{
+    width: 30px;
+    height: 22px;
+    display: none;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    cursor: pointer;
+    div{
+        height: 1px;
+        border-radius: 20px;
+        background-color: $color-text-1;
+    }
+    :first-child,
+    :last-child{
+        width: 100%;
+    }
+    :nth-child(2){
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: $breakpoint-tablet-lg) {
+    .header-desktop{
+        padding: 2rem $padding-normal;
+        nav{
+            .link-home,
+            .link-about-me,
+            .link-resume{
+                display: none;
+            }
+        }
+    }
+    .header-mobile{
+        padding: 2rem $padding-normal;
+    }
+    .mobile-trigger{
+        display: flex;
+    }
+}
+
+@media screen and (max-width: $breakpoint-tablet-sm) {
+    .header-desktop{
+        padding: 1.5rem $padding-normal;
+        nav{
+            .link-projects,
+            .nav-cta{
+                display: none;
+            }
+        }
+    }
+    .header-mobile{
+        padding: 1.5rem $padding-normal;
+        width: 400px;
+        .trigger-container{
+            height: 32px;
+        }
+    }
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+    .header-desktop{
+        padding: 1rem $padding-normal;
+        .logo{
+            img{
+                width: 36px;
+                height: 25px;
+            }
+        }
+    }
+    .header-mobile{
+        padding: 1rem $padding-normal;
+        width: 300px;
+        .trigger-container{
+            height: 25px;
+        }
+    }
+}
+
+// FOOTER
+
+footer{
+    @include section-pad;
+    margin-top: $section-margin;
+    display: flex;
+    flex-direction: column;
+    max-width: 1920px;
+}
+
+.footer-divisor{
+    width: 100%;
+    height: 1px;
+    background-color: $color-style-2;
+}
+
+.footer-divisor-bottom{
+    width: 100%;
+    height: 1px;
+    background-color: $color-style-2;
+    display: none;
+}
+
+.footer-item{
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 2rem;
+    span{
+        font-size: $text-paragraph-md;
+    }
+    div{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        text-align: right;
+        gap: 1rem;
+        a{
+            color: $color-text-2;
+            font-size: $text-paragraph-md;
+            display: flex;
+            gap: .4rem;
+            @include hover{
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+.footer-graphics{
+    background-image: url(/assets/img/footer-background.png);
+    background-position: right bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 416px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: $padding-normal;
+    margin-top: -80px;
+    z-index: -1;
+    max-width: 1920px;
+    span{
+        max-width: 200px;
+        color: $color-text-2;
+        text-align: center;
+        font-size: $text-paragraph-md;
+    }
+}
+
+@media screen and (max-width: $breakpoint-laptop){
+    $section-margin: 6rem;
+    footer{
+        @include section-pad;
+        margin-top: $section-margin;
+    }
+}
+
+@media screen and (max-width: $breakpoint-tablet-lg){
+    $section-margin: 5rem;
+    footer{
+        @include section-pad;
+        margin-top: $section-margin;
+    }
+    .footer-divisor-bottom{
+        display: inline;
+    }
+}
+
+@media screen and (max-width: $breakpoint-tablet-sm){
+    $section-margin: 4rem;
+    footer{
+        @include section-pad;
+        margin-top: $section-margin;
+    }
+    .footer-item{
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        div{
+            align-items: center;
+            text-align: center;
+            span{
+                font-size: $text-paragraph-sm;
+            }
+            div{
+                a{
+                    font-size: $text-paragraph-sm;
+                }
+            }
+        }
+    }
+    .footer-graphics{
+        background-image: none;
+        height: 200px;
+        span{
+            max-width: 200px;
+            color: $color-text-2;
+            text-align: center;
+        }
+    }
+    
+}
+
+@media screen and (max-width: $breakpoint-mobile){
+    $section-margin: 3rem;
+    footer{
+        @include section-pad;
+        margin-top: $section-margin;
+    }
+    .footer-graphics{
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 1.5rem;
+        margin-top: 3rem;
+        padding-top: 0;
+        height: fit-content;
+    }
+}
+
+@media screen and (min-width: $breakpoint-desktop) {
+    footer,
+    .header-desktop{
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+
+
+
