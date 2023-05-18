@@ -8,7 +8,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php require_once $_SERVER['DOCUMENT_ROOT'].'/templates/head.html'; ?>
     <link rel="stylesheet" href="/assets/css/index.min.css">
     <title>Diego Mantegazza | Web Designer :)</title>
     <meta name="description" content="This is the personal portfolio website of Diego Mantegazza, a web designer based in Milan (IT). Here you can find a brief description of what I do and see some of my project.">
@@ -48,6 +47,7 @@
     <noscript>
         <meta http-equiv="refresh" content="0; url=https://lite.diegomantegazza.me">
     </noscript>
+    <?php require_once $_SERVER['DOCUMENT_ROOT'].'/templates/head.html'; ?>
 </head>
 <body>
     <div class="loading-container">

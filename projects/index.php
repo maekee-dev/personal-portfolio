@@ -8,9 +8,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php require_once $_SERVER['DOCUMENT_ROOT'].'/templates/head.html'; ?>
     <link rel="stylesheet" href="/assets/css/projects.min.css">
     <title>Diego Mantegazza | Projects </title>
+    <meta name="description" content="Here some of the stuff i coded or designed. Let's have a look!">
+    <noscript>
+        <meta http-equiv="refresh" content="0; url=https://lite.diegomantegazza.me/projects/">
+    </noscript>
+    <?php require_once $_SERVER['DOCUMENT_ROOT'].'/templates/head.html'; ?>
 </head>
 <body>
     <?php require_once $_SERVER['DOCUMENT_ROOT'].'/templates/layouts/header.html'; ?>
@@ -43,8 +47,5 @@
     </main>
     <?php require_once $_SERVER['DOCUMENT_ROOT'].'/templates/layouts/footer.html'; ?> 
     <?php require_once $_SERVER['DOCUMENT_ROOT'].'/templates/footer-scripts.html'; ?>
-    <noscript>
-        A
-    </noscript>
 </body>
 </html>

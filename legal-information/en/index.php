@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php require_once $_SERVER['DOCUMENT_ROOT'].'/templates/head.html'; ?>
     <link rel="stylesheet" href="/assets/css/legal-information.min.css">
     <title>Diego Mantegazza | Legal Information</title>
     <meta name="robots" content="noindex">
+    <?php require_once $_SERVER['DOCUMENT_ROOT'].'/templates/head.html'; ?>
 </head>
 <body>
     <?php require_once $_SERVER['DOCUMENT_ROOT'].'/templates/layouts/header.html'; ?>
