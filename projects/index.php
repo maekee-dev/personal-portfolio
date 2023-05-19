@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/assets/css/projects.min.css">
     <title>Diego Mantegazza | Projects </title>
     <meta name="description" content="Here some of the stuff i coded or designed. Let's have a look!">
+    <link rel="canonical" href="https://diegomantegazza.me/projects/">
     <noscript>
         <meta http-equiv="refresh" content="0; url=https://lite.diegomantegazza.me/projects/">
     </noscript>

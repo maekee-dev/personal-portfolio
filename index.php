@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/assets/css/index.min.css">
     <title>Diego Mantegazza | Web Designer :)</title>
     <meta name="description" content="This is the personal portfolio website of Diego Mantegazza, a web designer based in Milan (IT). Here you can find a brief description of what I do and see some of my project.">
+    <link rel="canonical" href="https://diegomantegazza.me">
     <style>
     body{
         overflow-y: hidden;

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/assets/css/404.min.css">
     <title>Diego Mantegazza | About Me</title>
     <meta name="description" content="Here some of the stuff i coded or designed. Let's have a look!">
+    <link rel="canonical" href="https://diegomantegazza.me/about-me/">
     <noscript>
         <meta http-equiv="refresh" content="0; url=https://lite.diegomantegazza.me/about-me/">
     </noscript>

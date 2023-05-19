@@ -22,6 +22,7 @@ Redirect /useless-blog https://useless-blog.diegomantegazza.me
 Redirect /old https://old.diegomantegazza.me
 Redirect /lite https://lite.diegomantegazza.me
 Redirect /11ty https://11ty.diegomantegazza.me
+Redirect /analytics https://analytics.diegomantegazza.me
 
 Options -Indexes
 
