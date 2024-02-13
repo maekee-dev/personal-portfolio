@@ -1,0 +1,207 @@
+::placeholder{
+    opacity: .6;
+}
+
+label{
+    cursor: none;
+}
+
+.form{
+    width: 100%;
+    max-width: 1920px;
+    padding: 0 $padding-normal;
+    .container{
+        width: 100%;
+        padding: 2rem;
+        border: 1px solid $color-style-2;
+        background-color: $color-background;
+        border-radius: 4px;
+        .title{
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            span{
+                max-width: 300px;
+                font-size: 1rem;
+                font-family: 'OffBit', sans-serif;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+            p{
+                max-width: 300px;
+                font-size: 1rem;
+                color: $color-text-2;
+            }
+        }
+        form{
+            width: 100%;
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 1.5rem;
+            .input__container{
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                width: 100%;
+            }
+            .single__input{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                position: relative;
+                gap: .5rem;
+                label{
+                    font-size: .875rem;
+                    text-transform: uppercase;
+                    display: flex;
+                    align-items: center;
+                    gap: .5rem;
+                    div{
+                        width: 8px;
+                        height: 8px;
+                        background-color: $color-style-2;
+                        border-radius: 50%;
+                    }
+                }
+                input{
+                    height: 50px;
+                    border-radius: 4px;
+                    width: 100%;
+                    background-color: $color-background;
+                    outline: none;
+                    border: 1px solid $color-style-2;
+                    font-size: 1rem;
+                    font-family: "Manrope",sans-serif;
+                    color: #fff;
+                    transition: border-color 200ms ease;
+                    padding: 0 1rem;
+                    font-family: 'Manrope', sans-serif;
+                    &:focus{
+                        border-color: $color-style-1;
+                    }
+                }
+            }
+            .textarea{
+                display: flex;
+                flex-direction: column;
+                gap: .5rem;
+                width: 100%;
+                label{
+                    font-size: .875rem;
+                    text-transform: uppercase;
+                    display: flex;
+                    align-items: center;
+                    gap: .5rem;
+                    margin-left: .5rem;
+                    div{
+                        width: 8px;
+                        height: 8px;
+                        background-color: $color-style-2;
+                        border-radius: 50%;
+                    }
+                }
+                textarea{
+                    min-height: 215px;
+                    max-width: 100%;
+                    padding: 1rem;
+                    border-radius: 4px;
+                    width: 100%;
+                    background-color: $color-background;
+                    outline: none;
+                    border: 1px solid $color-style-2;
+                    font-size: 1rem;
+                    color: #fff;
+                    resize: none;
+                    font-family: 'Manrope', sans-serif;
+                    &:focus{
+                        
+                        border-color: $color-style-1;
+                    }
+                }
+            }
+            button{
+                max-width: fit-content;
+                font-weight: bold;
+                font-family: 'OffBit', sans-serif;
+                font-size: .875rem;
+                padding: .675rem 1.05rem .4rem;
+                color: white;
+                text-transform: uppercase;
+                border: 1px solid white;
+                border-radius: 4px;
+                margin-left: .6rem;
+                transition: color 200ms ease,
+                background-color 200ms ease;
+                background-color: $color-background;
+                cursor: none;
+                @include hover{
+                    &:hover{
+                        background-color: white;
+                        color: $color-background;
+                    }
+                }
+            }
+            .privacy{
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                width: 100%;
+                gap: .75rem;
+                label{
+                    font-size: .875rem;
+                    font-family: 'Manrope', sans-serif;
+                    color: $color-text-2;
+                    a{
+                        text-decoration: underline;
+                    }
+                }
+                input{
+                    max-width: 15px;
+                    max-height: 15px;
+                    min-width: 15px;
+                    min-height: 15px;
+                    accent-color: $color-style-1;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $breakpoint-tablet-sm) {
+    .form{
+        .container{
+            padding: 1.5rem;
+            form{
+                .input__container{
+                    flex-direction: column;
+                    gap: 1.5rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+    .form{
+        .container{
+            padding: 3rem 0 0;
+            border: none;
+            .title{
+                display: flex;
+            }
+            form{
+                margin-top: 2rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $breakpoint-desktop) {
+    .form{
+        padding-left: unset;
+        padding-right: unset;
+    }
+}

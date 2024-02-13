@@ -1,0 +1,157 @@
+<section class="console-section" id="spaceInvaders" aria-hidden="true">
+    <div class="container">
+        <div class="page-menu">
+            <div class="item">
+                <span>Map</span>
+                <div class="group">
+                    <a href="/projects/">Projects</a>
+                    <a href="/about-me/">About Me</a>
+                    <a href="/downloads/curriculum-diego-mantegazza-web-design.pdf">Resume</a>
+                    <a href="/contacts/">Contacts</a>
+                </div>
+            </div>
+            <div class="item">
+                <span>Actions</span>
+                <div class="group">
+                    <button onclick="startGame()" class="cursor__big">Play Game</button>
+                </div>
+            </div>
+        </div>
+        <div class="nav-link">
+            <span id="consoleUrl"></span>
+        </div>
+        <div class="header">
+            <span>
+                <svg class="rotation" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.6938 8.10921C10.2892 7.50388 9.6343 7.22494 8.99768 7.27124C8.51593 7.30611 8.03817 7.16205 7.69643 6.82023L7.49299 6.61674C6.87694 6.00054 6.87694 5.00196 7.49299 4.38577L7.69643 4.18227C8.03817 3.84045 8.51535 3.6964 8.99711 3.73127C9.6343 3.77757 10.2903 3.49805 10.695 2.89101C11.0978 2.28625 11.1024 1.47171 10.7041 0.864091C10.0286 -0.166516 8.63136 -0.271119 7.81015 0.550851C7.40098 0.95955 7.22268 1.51115 7.27354 2.0456C7.31754 2.51146 7.15124 2.97274 6.82036 3.30371L6.61577 3.50834C5.99972 4.12454 5.00136 4.12454 4.38531 3.50834L4.18187 3.30485C3.84013 2.96303 3.69611 2.48574 3.73097 2.0033C3.77669 1.36653 3.49839 0.711472 2.8932 0.306774C2.28915 -0.097352 1.4748 -0.103066 0.866176 0.294773C-0.166477 0.969269 -0.271626 2.36856 0.550725 3.1911C0.9599 3.60037 1.51137 3.77872 2.04513 3.72785C2.51088 3.68383 2.97206 3.85017 3.30294 4.18113L3.50753 4.38633C4.12358 5.00252 4.12358 6.00112 3.50753 6.61731L3.30409 6.8208C2.96234 7.16263 2.48516 7.30668 2.00284 7.27181C1.36622 7.22551 0.711879 7.50445 0.306704 8.10978C-0.0973275 8.71397 -0.103044 9.52851 0.294702 10.1373C0.969041 11.1702 2.36801 11.2759 3.19036 10.4528C3.59954 10.0435 3.77783 9.4925 3.72697 8.95805C3.68297 8.49219 3.84927 8.0309 4.18015 7.69994L4.38474 7.4953C5.00079 6.87911 5.99916 6.87911 6.6152 7.4953L6.81979 7.69994C7.15067 8.0309 7.31697 8.49219 7.27297 8.95805C7.22211 9.4925 7.40098 10.0435 7.80958 10.4528C8.63193 11.2753 10.0309 11.1702 10.7052 10.1373C11.1024 9.52851 11.0973 8.71397 10.6932 8.10978L10.6938 8.10921Z" fill="#080808"/>
+                </svg>
+                Cypher OS
+            </span>
+            <div class="style__black">
+                <div class="triangle"></div>
+            </div>
+        </div>
+        <div class="console-body">
+            <div class="game-canvas">
+                <canvas></canvas>
+                <span id="game-score" class="score"></span>
+            </div>
+            <div class="game-over">
+                <span>game over</span>
+                <div></div>
+            </div>
+            <div class="game-errors">
+                <span>Your device isn't supported :(</span>
+            </div>
+            <div class="game-overlay">
+                <span id="game-countdown">3</span>
+                <br>
+                <span class="info">Move: <span>A</span><span>D</span> or <span>🠔</span><span>🠖</span></span>
+                <span class="info">Shoot: with <span>W</span></span>
+            </div>
+            <div class="text">
+                <div class="header">
+                    <span>Home&nbsp;/&nbsp;Personal&nbsp;/&nbsp;SYSDWD&nbsp;/&nbsp;Console.mz</span>
+                </div>
+                <span>
+                    Cyphire Console [V 13.7.1323.3232.22]<br>
+                    (c) Cyphire Cyberware. All rights reserved.<br><br>
+                    root@134.23.2.#> comp dataExec.exr
+                </span>
+                <p>0.39022756056694585 0.5346185783759083 0.23144823526964098 0.4322249102589739 0.929968626968779 0.2648331503006083 0.3595821610651584 0.438140308074062 0.7441006829098065 0.43866407680396624 0.9182736899136899 0.4125139922333183 0.8307338104883668 0.6844389405218143 0.9769552137929352 0.8891329742450045 0.058491058759016834 0.23853406800022436 0.28477516707996964 0.874034271569464 0.35164732355022665 0.10274224814755462 0.04733300951394681 0.09601901028604876 0.6466408547552214 0.1422370042466321 0.4507974851217118 0.26273985985134973 0.7742692118134953 0.5921825930358613 0.7476763206738282 0.6887006683512218 0.9720035602025419 0.7979715665264524 0.9775984074913016 0.5371642767755869 0.10071798822748845 0.024009136262274966 0.9289151057371956 0.8192202125308197 0.10478751104456485 <br>
+                    <br> [#] Authorized <br>
+                    [#] Searching <br>
+                    [#] Requesting Authorization <br> 
+                    [#] Authorized<br>
+                    [#] Encryption Unsuccesful Attempting Retry<br> <br>
+                    0.5675289462008053 0.4202103902945058 0.036092905901055516 0.5991805756825055 0.11370491980845054 0.15738111286471335 0.8142644304554942 0.40591594640939954 0.0010347299565303114 0.7752733014668429 0.810939649858381 0.5803256879064744 0.6592687758558093 0.8505000878068134 0.32612140356728103 0.8511333643171886 0.9716907201337344 <br>
+                    0.964428084598157 0.5797628304144433 0.1418763502965954 0.9449300019513145
+                    <br> <br> [#] Compression Complete <br>
+                    [#] Compilation of Data Structures Complete<br>
+                    [#] Access Granted<br>
+                    [#] Entering Security Console<br>
+                    [#] Authorized<br>
+                    [#] Opening Data Set:<br><br><br>
+                    <button onclick="startGame()" class="cursor__big cursor__dark">Play Game</button><br><br></p>
+            </div>
+            <div class="images">
+                <div class="item item-1">
+                    <div class="header">
+                        <span>Home&nbsp;/&nbsp;Docs&nbsp;/&nbsp;image-1.webp</span>
+                    </div>
+                    <a href="https://letterboxd.com/film/blade-runner-2049/" target="_blank">
+                        <img src="/assets/img/index/console-film-3.webp" alt="A man is walking in a dark street. From the movie 'Blade Runner: 2049' by Denis Villeneuve." loading="lazy">
+                    </a>
+                    <div class="info">
+                        <span>
+                            Blade Runner 2049 __ 2017
+                        </span>
+                    </div>
+                </div>
+                <div class="item item-2">
+                    <div class="header">
+                        <span>Home&nbsp;/&nbsp;Docs&nbsp;/&nbsp;image-3.webp</span>
+                    </div>
+                    <a href="https://letterboxd.com/film/the-northman/" target="_blank">
+                        <img src="/assets/img/index/console-film-1.webp" alt="A tree is approaching Yggdrasil, the tree of life. From the movie 'The Northman' by Robert Eggers." loading="lazy">
+                    </a>
+                    <div class="info">
+                        <span>
+                            The Northman __ 2022
+                        </span>
+                    </div>
+                </div>
+                <div class="item item-3">
+                    <div class="header">
+                        <span>Home&nbsp;/&nbsp;Docs&nbsp;/&nbsp;image-2.webp</span>
+                    </div>
+                    <a href="https://letterboxd.com/film/la-la-land/" target="_blank">
+                        <img src="/assets/img/index/console-film-2.webp" alt="A woman sitting in a dim auditorium surrounded by seated audience members. A special seat is empty. From the movie 'La La Land' by Damien Chazelle." loading="lazy">
+                    </a>
+                    <div class="info">
+                        <span>
+                            La La Land __ 2016
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="menu">
+                <div class="wrapper">
+                    <a href="/projects/" onmouseenter="showUrl('/projects')" onmouseleave="hideUrl()">
+                        <div class="object">
+                            <div class="style">
+                                <span>&#x263C;</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/about-me/" onmouseenter="showUrl('/about-me')" onmouseleave="hideUrl()">
+                        <div class="object">
+                            <div class="style">
+                                <span>&#x26A1;</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a target="_blank" href="/downloads/curriculum-diego-mantegazza-web-design.pdf" onmouseenter="showUrl('Download CV')" onmouseleave="hideUrl()">
+                        <div class="object">
+                            <div class="style">
+                                <span>&#x2728;</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/contacts/" onmouseenter="showUrl('/contacts')" onmouseleave="hideUrl()">
+                        <div class="object">
+                            <div class="style">
+                                <span>&#x2708;</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="trigger cursor__big" onclick="consoleMenu()">
+                    <div id="consoleMenuTrigger1"></div>
+                    <div id="consoleMenuTrigger2"></div>
+                    <div id="consoleMenuTrigger3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,34 @@
+<main>
+    <div class="projects-container">
+        <h1>Showcase</h1>
+        <div class="projects-grid">
+            {% for name, url in projectList.projects %}
+                <a href="{{ url }}" target="_blank">
+                    <div class="item">
+                        <div class="border">
+                            <div class="triangle"></div>
+                        </div>
+                        <div class="body">
+                            <span> {{ name }}</span>
+                            <div>
+                                <span>&#x25b6;</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
+        <div class="other-projects-container">
+            <h3>OTHER PROJECTS</h3>
+            {% for name, url, type in projectList.other_projects %}
+                <a href="{{ url }}" target="_blank">
+                    <div class="other-projects-item">
+                        <div class="selection__light"></div>
+                        <span class="project__name">{{ name }}</span>
+                        <span class="project__type">{{ type }}</span>
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+</main>

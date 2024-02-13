@@ -1,0 +1,104 @@
+{# 
+    Data format
+    -> layout: base.njk
+    -> title: titolo della pagina nel formato Diego • <title>
+    -> description: descrizione della pagina per il meta name="description", può essere omesso
+    -> css: 
+            - nome_file_1
+            ...
+            - nome_file_x
+        definisce i file .css da inserire 
+    -> js: 
+            - ["nome_file_1"]
+            - ["nome_file_2", true]
+            ...
+            - ["nome_file_1", false]
+        definisce i file .js da inserire, ["nome_file", type="module" yes | no]
+    -> noindex: [true | false] definisce il meta content="noindex", può essere omesso
+#}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% include 'head.njk' %}
+    
+    <title>Diego • {{ title }}</title>
+    {% if noindex %} <meta name="robots" content="noindex"> {% endif %}
+    {% if description is defined %} <meta name="description" content="{{ description }}"> {% endif %}
+
+    {% for style in css %}
+      <link href="/assets/css/{{ style }}.css" rel="stylesheet">
+    {% endfor %}
+
+    <script src="/assets/js/lib/gsap.js"></script>
+    <script data-host="https://app.microanalytics.io" data-dnt="false" src="https://app.microanalytics.io/js/script.js" id="ZwSg9rf6GA" async defer></script>
+    
+    <style> {% include 'styles/loading-screen.css' %} </style>
+</head>
+<body>
+    {% include 'loading-screen.njk' %}
+
+    {% include 'header.njk' %}
+    {{ content | safe }}    
+    <div class="cursor"></div>
+    {% include 'footer.njk' %}
+
+    <script src="/assets/js/lib/scrollTrigger.js"></script> 
+    <script src="/assets/js/lib/textPlugin.js"></script>
+    <script src="/assets/js/lib/lenis.js"></script>
+
+    <script> 
+      {% include 'scripts/lenisLoading.js' %} 
+    </script>
+    
+    <script async src="/assets/js/general.js"></script>
+
+    {% for script, module in js %}
+      <script async src="/assets/js/{{ script }}.js" {% if module == true %} type="module" {% endif %}></script>
+    {% endfor %}
+
+    <script async>
+      let isTouch = 'ontouchstart' in window 
+      || navigator.maxTouchPoints > 0 
+      || navigator.msMaxTouchPoints > 0
+      window.addEventListener('resize', () => {
+        if(isTouch) return
+        location.reload()
+      })
+    </script>
+
+    <script async>
+      {% include 'scripts/loadingScreen.js' %}
+    </script>
+
+    {%if css == 'index' %}
+      <script type="module">
+        {% include 'scripts/indexThreeJS.js' %}
+      </script>
+    {% endif %}
+</body>
+</html>
+
+<!-- htmlmin:ignore -->
+<!--
+⣿⣿⣿⣿⣿⣿⠿⢋⣥⣴⣶⣶⣶⣬⣙⠻⠟⣋⣭⣭⣭⣭⡙⠻⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⡿⢋⣴⣿⣿⠿⢟⣛⣛⣛⠿⢷⡹⣿⣿⣿⣿⣿⣿⣆⠹⣿⣿⣿⣿
+⣿⣿⣿⡿⢁⣾⣿⣿⣴⣿⣿⣿⣿⠿⠿⠷⠥⠱⣶⣶⣶⣶⡶⠮⠤⣌⡙⢿⣿
+⣿⡿⢛⡁⣾⣿⣿⣿⡿⢟⡫⢕⣪⡭⠥⢭⣭⣉⡂⣉⡒⣤⡭⡉⠩⣥⣰⠂⠹
+⡟⢠⣿⣱⣿⣿⣿⣏⣛⢲⣾⣿⠃⠄⠐⠈⣿⣿⣿⣿⣿⣿⠄⠁⠃⢸⣿⣿⡧
+⢠⣿⣿⣿⣿⣿⣿⣿⣿⣇⣊⠙⠳⠤⠤⠾⣟⠛⠍⣹⣛⣛⣢⣀⣠⣛⡯⢉⣰
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡶⠶⢒⣠⣼⣿⣿⣛⠻⠛⢛⣛⠉⣴⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⡿⢛⡛⢿⣿⣿⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡈⢿⣿
+⣿⣿⣿⣿⣿⣿⣿⠸⣿⡻⢷⣍⣛⠻⠿⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⢇⡘⣿
+⣿⣿⣿⣿⣿⣿⣿⣷⣝⠻⠶⣬⣍⣛⣛⠓⠶⠶⠶⠤⠬⠭⠤⠶⠶⠞⠛⣡⣿
+⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣶⣬⣭⣍⣙⣛⣛⣛⠛⠛⠛⠿⠿⠿⠛⣠⣿⣿
+⣦⣈⠉⢛⠻⠿⠿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠿⠛⣁⣴⣾⣿⣿⣿⣿
+⣿⣿⣿⣶⣮⣭⣁⣒⣒⣒⠂⠠⠬⠭⠭⠭⢀⣀⣠⣄⡘⠿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⡈⢿⣿⣿⣿⣿⣿
+-->
+<!-- HTML MINIFIED WITH 11TY + HTML-MINIFIER -->
+<!-- htmlmin:ignore -->

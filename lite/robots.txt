@@ -1,5 +1,0 @@
-# robots.txt
-# lite.diegomantegazza.me
-
-User-agent: *
-Disallow: *

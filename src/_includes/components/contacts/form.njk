@@ -1,0 +1,44 @@
+<div class="form">
+    <div class="container">
+        <div class="title">
+            <span>Send me a message</span>
+            <p>Use the form below to send me a message.</p>
+        </div>
+        <form name="contacts" method="post" id="form" netlify-honeypot="bot-field" netlify>
+            <div class="input__container">
+                <div class="single__input" id="name-input">
+                    <label><div></div>Your Name or Company</label>
+                    <input type="text" name="name" id="name" placeholder="Eldon Tyrell" required
+                    onfocus="gsap.to('#name-input label div', {backgroundColor: '#00FF85', duration: .2})" onblur="gsap.to('#name-input label div', {backgroundColor: '#121212', duration: .2})">
+                </div>
+                <div class="single__input" id="email-input">
+                    <label><div></div>Your Email</label>
+                    <input type="email" name="email" id="email" placeholder="eldon.tyrell@tyrellcorporation.com" required
+                    onfocus="gsap.to('#email-input label div', {backgroundColor: '#00FF85', duration: .2})" onblur="gsap.to('#email-input label div', {backgroundColor: '#121212', duration: .2})">
+                </div>
+            </div>
+            <div class="input__container">
+                <div class="single__input" id="url-input">
+                    <label><div></div>Your Website or Page (optional)</label>
+                    <input type="url" name="url" id="url" placeholder="https://tyrellcorporation.com"
+                    onfocus="gsap.to('#url-input label div', {backgroundColor: '#00FF85', duration: .2})" onblur="gsap.to('#url-input label div', {backgroundColor: '#121212', duration: .2})">
+                </div>
+                <div class="single__input" id="know-input">
+                    <label><div></div>How did you find me? (optional)</label>
+                    <input type="text" name="know" id="know" placeholder="By browsing the web"
+                    onfocus="gsap.to('#know-input label div', {backgroundColor: '#00FF85', duration: .2})" onblur="gsap.to('#know-input label div', {backgroundColor: '#121212', duration: .2})">
+                </div>
+            </div>
+            <div class="textarea">
+                <label><div></div>Your message</label>
+                <textarea name="message" id="message" placeholder="Hello, I would like to discuss your innovative replicant solutions and possibilities for future collaboration." required
+                onfocus="gsap.to('.textarea label div', {backgroundColor: '#00FF85', duration: .2})" onblur="gsap.to('.textarea label div', {backgroundColor: '#121212', duration: .2})"></textarea>
+            </div>
+            <div class="privacy">
+                <input type="checkbox" name="privacy" id="privacy" required>
+                <label for="privacy">I agree to the processing of my personal data as stated in the <a href="/privacy/" target="_blank">Privacy Policy</a>.</label>
+            </div>
+            <button class="cursor__big" type="submit" formtarget="_blank">Send &#x25b6;</button>
+        </form>
+    </div>
+</div>

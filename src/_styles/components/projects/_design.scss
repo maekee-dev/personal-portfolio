@@ -1,0 +1,190 @@
+.design{
+    width: 100%;
+    max-width: 1920px;
+    padding: 12rem 0 6rem $padding-normal;
+    overflow: hidden;
+}
+
+.design-container{
+    position: relative;
+    $width: 570px;
+    height: 400px;
+    .item{
+        position: absolute;
+        width: $width;
+        height: 100%;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border: 1px solid transparent;
+            transition: border 200ms ease;
+            @include hover{
+                &:hover{
+                    border: 1px solid $color-style-1;
+                }
+            }
+        }
+    }
+    @for $i from 0 through 3 {
+        .item-#{$i + 1}{
+            left: calc(2vw * #{$i});
+        }
+    }
+    .text{
+        position: absolute;
+        height: 100%;
+        left: calc(5vw + 8rem + #{$width});
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding-right: $padding-normal;
+        max-width: $width;
+        z-index: -1;
+        h2{
+            font-size: $text-title-lg;
+            font-family: 'OffBit', sans-serif;
+            text-transform: uppercase;
+            font-weight: 400;
+            line-height: 95%;
+            span{
+                font-weight: bold;
+            }
+        }
+        p{
+            color: $color-text-2;
+            font-size: 1.125rem;
+            margin-top: .5rem;
+        }
+        a{
+            margin-top: 2rem;
+            width: fit-content;
+            @include cta($color-style-1, $color-style-1-hover);
+            transition: background 200ms ease;
+        }
+    }
+}
+
+
+@media screen and (max-width: $breakpoint-laptop) {
+    .design{
+        padding-top: 8rem;
+    }
+    .design-container{
+        $width: 500px;
+        height: 350px;
+        .item{
+            width: $width;
+        }
+        @for $i from 1 through 3 {
+            .item-#{$i + 1}{
+                left: calc(5vw + calc(2vw * #{$i}) + 100px);
+            }
+        }
+        .text{
+            left: calc(10vw + 12rem + #{$width});
+            h2{
+                font-size: 3.5rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1196px) {
+    .design{
+        padding-top: 6rem;
+    }
+    .design-container{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6rem;
+        padding-right: $padding-normal;
+        .container{
+            height: 1000px;
+            width: 100%;
+            height: 33vw;
+            position: relative;
+            .item{
+                position: absolute;
+                width: 50vw;
+                height: 33vw;
+                left: calc(50% - 25vw);
+            }
+            .item-1{
+                margin-left: -4vw;
+                transform: rotate(4deg);
+            }
+            .item-2{
+                margin-left: 4vw;
+                transform: rotate(4deg);
+            }
+            .item-3{
+                margin-left: -2vw;
+                transform: rotate(-4deg);
+            }
+            .item-4{
+                margin-left: 2vw;
+                transform: rotate(0deg);
+            }
+        }
+        .text{
+            position: unset;
+            width: 100%;
+            left: unset;
+            align-items: center;
+            text-align: center;
+            z-index: 10;
+            padding-right: unset;
+        }
+    }
+}
+
+@media screen and (max-width: $breakpoint-tablet-sm) {
+    .design-container{
+        gap: 4.5rem;
+        .container{
+            width: 100%;
+            height: 50vw;
+            position: relative;
+            .item{
+                position: absolute;
+                width: 80vw;
+                height: 50vw;
+                left: calc(50% - 40vw);
+            }
+        }
+        .text{
+            h2{
+                font-size: 3rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+    .design{
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    .design-container{
+        gap: 3rem;
+        .text{
+            max-width: none;
+            h2{
+                font-size: 10vw;
+            }
+            p{
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $breakpoint-desktop) {
+    .design{
+        display: none;
+    }
+}

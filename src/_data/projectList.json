@@ -1,0 +1,21 @@
+{
+    "projects": [
+        ["Valtrighe Basketball", "https://valtrighebasketball.com"],
+        ["Giovanni Brambilla", "https://giovannibrambilla.com"],
+        ["Fratelli Cremonesi", "https://www.fratellicremonesi.it"],
+        ["Mantegazza SRL", "https://edilmantegazza.it"],
+        ["Arkitech STP", "https://arkitechstp.it"],
+        ["Easy Drink & Food", "https://easydrinkandfood.it"]
+    ],
+    "other_projects": [
+        ["NewsScraper", "https://newsscraper-maekee-dev.vercel.app/", "dev"],
+        ["Cinema", "https://cinema-maekee-dev.vercel.app", "design"],
+        ["Three JS Mirror Playground", "https://threejs-mirror-playground.vercel.app", "dev"],
+        ["Architetto Grossi Costruzioni", "https://architettogrossicostruzioni.it", "website"]
+    ],
+    "home_projects": [
+        ["Valtrighe Basketball", "https://valtrighebasketball.com"],
+        ["Giovanni Brambilla", "https://giovannibrambilla.com"],
+        ["Mantegazza Srl", "https://edilmantegazza.it"]
+    ]
+}

@@ -1,0 +1,13 @@
+@import 'components/_main';
+
+.header-desktop .link-projects{
+    border-color: $color-style-1;
+}
+
+.header-mobile .link-projects{
+    text-decoration: line-through;
+}
+
+@import 'components/projects/_projects';
+@import 'components/projects/_design';
+@import 'components/projects/_showcase';

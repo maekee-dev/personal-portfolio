@@ -1,0 +1,48 @@
+<header>
+    <div class="header-desktop">
+        <a class="logo" href="/" aria-label="Go to homepage">
+            <div></div>
+        </a>
+        <nav>
+            <a class="nav-link link-home" href="/">HOME</a>
+            <a class="nav-link link-projects" href="/projects/">PROJECTS</a>
+            <a class="nav-link link-about-me" href="/about-me/">ABOUT ME</a>
+            <!--<a class="nav-link link-resume" target="_blank" href="/downloads/curriculum-diego-mantegazza-web-design.pdf">RESUME</a>-->
+            <a class="nav-cta" href="/contacts/">GET IN TOUCH</a>
+            <div class="mobile-trigger" onclick="openMobileMenu()">
+                <div id="mob-trig-1"></div>
+                <div id="mob-trig-2"></div>
+                <div id="mob-trig-3"></div>
+            </div>
+        </nav>
+    </div>
+    <div class="header-mobile" data-nospippet aria-hidden="true">
+        <div class="full__container">
+            <div class="trigger-container">
+                <div class="overlay" onclick="closeMobileMenu()"></div>
+                <div class="mobile-trigger" onclick="closeMobileMenu()">
+                    <div id="mob-trig-1"></div>
+                    <div id="mob-trig-2"></div>
+                    <div id="mob-trig-3"></div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="item">
+                    <a href="/" class="link-home">Home</a>
+                </div>
+                <div class="item">
+                    <a href="/projects/" class="link-projects">Projects</a>
+                </div>
+                <div class="item">
+                    <a href="/about-me/" class="link-about-me">About Me</a>
+                </div>
+                <!--<div class="item">
+                    <a href="/downloads/curriculum-diego-mantegazza-web-design.pdf" target="_blank">Resume</a>
+                </div>-->
+                <div class="item">
+                    <a href="/contacts/" class="link-contacts">Contacts</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

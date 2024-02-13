@@ -1,0 +1,37 @@
+@import 'components/_main';
+
+$index-bg: #040404;
+
+.header-desktop .link-home{
+    border-color: $color-style-1;
+}
+
+.header-mobile .link-home{
+    text-decoration: line-through;
+}
+
+canvas { 
+    display: block;
+}
+
+@import 'components/index/_vertical-nav';
+@import 'components/index/_hero';
+@import 'components/index/_about-me';
+@import 'components/index/_projects';
+@import 'components/index/_motto';
+@import 'components/index/_services';
+@import 'components/index/_info';
+@import 'components/index/_console';
+@import 'components/index/_mail';
+@import 'components/index/_contacts';
+
+footer{
+    padding: 0 $padding-normal 0 calc(#{$padding-normal} + 100px);
+}
+
+@media screen and (max-width: 1196px) {
+    footer{
+        padding: 0 $padding-normal;
+    }
+}
+

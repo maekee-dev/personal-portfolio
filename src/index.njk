@@ -1,0 +1,24 @@
+---
+layout: base.njk
+title: Personal Portfolio :)
+description: This is the personal portfolio website of Diego Mantegazza, a web designer based in Milan (IT). Here you can find a brief description of what I do and see some of my project.
+css: 
+    - index
+js: 
+    - ["index"]
+    - ["spaceInvaders"]
+noindex: false
+sitemap: true
+priority: 1
+---
+
+{% include 'components/index/vertical-nav.njk' %}
+{% include 'components/index/hero.njk' %}
+{% include 'components/index/about-me.njk' %}
+{% include 'components/index/projects.njk' %}
+{% include 'components/index/services.njk' %}
+{% include 'components/index/info.njk' %}
+{% include 'components/index/motto.njk' %}
+{% include 'components/index/console.njk' %}
+{% include 'components/index/mail.njk' %}
+{% include 'components/index/contacts.njk' %}

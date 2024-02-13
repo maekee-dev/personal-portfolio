@@ -1,0 +1,11 @@
+@import 'components/_main';
+
+.header-mobile .link-contacts{
+    text-decoration: line-through;
+}
+
+@import 'components/contacts/_intro';
+@import 'components/contacts/_main';
+@import 'components/contacts/_resume';
+@import 'components/contacts/_form';
+

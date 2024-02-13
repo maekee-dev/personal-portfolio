@@ -1,0 +1,97 @@
+<main> 
+    <div class="hero__container">
+        <div class="hero__text">
+            <h1>
+                <span style="font-weight: 400;">I'm Diego</span><br>
+                <span style="font-weight: 400;">__</span>Web<br> 
+                De<span style="font-weight: 400;" class="parenthesis">(v)</span>signer
+            </h1>
+            <p>{{ textGeneral.homepage.hero.paragraph }} <a href="/contacts/">{{ textGeneral.homepage.hero.paragraph_link }}</a> </p>
+        </div>
+        <div class="show__mobile">
+            <svg class="rotation" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.5293 8.52968H11.6839C11.1126 8.52968 10.8263 7.83882 11.2308 7.43499L15.3639 3.30171C15.5476 3.11809 15.5476 2.81977 15.3639 2.63686C15.1803 2.45323 14.882 2.45323 14.6984 2.63686L10.5653 6.77013C10.1615 7.17396 9.47065 6.88833 9.47065 6.31636V0.470662C9.47065 0.210353 9.2603 0 9 0C8.7397 0 8.52936 0.210353 8.52936 0.470662V6.31636C8.52936 6.88763 7.83851 7.17396 7.43469 6.77013L3.30157 2.63686C3.11796 2.45323 2.81967 2.45323 2.63606 2.63686C2.45244 2.82048 2.45244 3.11809 2.63606 3.30171L6.76917 7.43499C7.17299 7.83882 6.88736 8.52968 6.31611 8.52968H0.470652C0.211057 8.52968 0 8.74005 0 9.00036C0 9.26067 0.210354 9.47102 0.470652 9.47102H6.31611C6.88736 9.47102 7.17369 10.1619 6.76917 10.5657L2.63606 14.699C2.45244 14.8826 2.45244 15.1802 2.63606 15.3638C2.81967 15.5475 3.11725 15.5475 3.30157 15.3638L7.43469 11.2306C7.83851 10.8267 8.52936 11.1124 8.52936 11.6836V17.5293C8.52936 17.7889 8.7397 18 9 18C9.2603 18 9.47065 17.7889 9.47065 17.5293V11.6836C9.47065 11.1124 10.1615 10.826 10.5653 11.2299L14.6984 15.3631C14.882 15.5468 15.1796 15.5468 15.3639 15.3631C15.5476 15.1795 15.5476 14.8812 15.3639 14.6983L11.2308 10.565C10.827 10.1612 11.1126 9.47032 11.6839 9.47032H17.5293C17.7889 9.47032 18 9.25996 18 8.99966C18 8.73935 17.7896 8.52898 17.5293 8.52898V8.52968Z" fill="#bebebe"/>
+            </svg> 
+            <span>地平線を見る</span>
+            <span>Name __ Diego Mantegazza</span>
+            <span>Freelance Web Dev __ Designer</span>
+            <span>Based in Milan __ Italy</span>
+            <span><a href="mailto:hello@diegomantegazza.me">hello@diegomantegazza.me</a></span>
+        </div>
+    </div>
+    <div class="hero__style" aria-hidden="true">
+        <div class="three__sphere" id="scene-container-hero" ></div>
+        <div class="console console__1" onmouseenter="gsap.to('.hero__style .console__2', {opacity: 0, display: 'none', duration: .2})" onmouseleave="gsap.to('.hero__style .console__2', {opacity: 1, display: 'unset', duration: .2})">
+            <div class="header">
+                <span>Comm / Notes.txt</span>
+            </div>
+            <div class="body"> 
+                <span> You can find me __ here</span>
+                <div class="group link">
+                    <span>&#8594;</span>
+                    <a href="{{ linkList.Github }}" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24" width="24"><path fill="#bebebe" fill-rule="evenodd" d="M5 1a4 4 0 0 0 -4 4v14a4 4 0 0 0 4 4h14a4 4 0 0 0 4 -4V5a4 4 0 0 0 -4 -4H5Zm4.818 6.773s0.673 -0.364 2.182 -0.364c1.51 0 2.182 0.364 2.182 0.364 1.414 -1.25 2.311 -1.68 4 -2.182 0.655 1.554 0.764 2.429 0.727 4 0 0 1.091 0.85 1.091 3.636 0 4.817 -3.991 6.182 -8 6.182s-8 -1.365 -8 -6.182c0 -2.786 1.09 -3.636 1.09 -3.636 -0.036 -1.571 0.073 -2.446 0.728 -4 1.689 0.502 2.586 0.931 4 2.182Zm-3.636 6.545c0.23 -2.78 2.368 -2.531 4.327 -2.302 0.523 0.06 1.033 0.12 1.491 0.12 0.458 0 0.968 -0.06 1.491 -0.12 1.959 -0.23 4.096 -0.479 4.327 2.302 0.308 3.714 -3.196 3.669 -5.33 3.641 -0.173 -0.002 -0.336 -0.004 -0.488 -0.004 -0.152 0 -0.315 0.002 -0.487 0.004 -2.135 0.028 -5.64 0.073 -5.331 -3.64Zm4.182 0.546c0 0.903 -0.489 1.636 -1.091 1.636 -0.603 0 -1.091 -0.733 -1.091 -1.636 0 -0.904 0.488 -1.637 1.09 -1.637 0.603 0 1.092 0.733 1.092 1.636Zm4.363 1.636c0.603 0 1.091 -0.733 1.091 -1.636 0 -0.904 -0.488 -1.637 -1.09 -1.637 -0.603 0 -1.092 0.733 -1.092 1.636 0 0.904 0.489 1.637 1.091 1.637Z" clip-rule="evenodd" stroke-width="1"></path></svg></a>
+                    <a href="{{ linkList.LinkedIn }}" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24" width="24"><path fill="#bebebe" fill-rule="evenodd" d="M5 1a4 4 0 0 0 -4 4v14a4 4 0 0 0 4 4h14a4 4 0 0 0 4 -4V5a4 4 0 0 0 -4 -4H5Zm1.205 6.91a1.705 1.705 0 1 0 0 -3.41 1.705 1.705 0 0 0 0 3.41ZM7.909 19.5V9.273H4.5V19.5h3.41Zm4.432 -10.227H9.273V19.5h3.068v-6.17c0.395 -0.642 1.077 -1.33 2.045 -1.33 1.364 0 1.705 1.364 1.705 2.046V19.5H19.5v-5.454c0 -1.828 -0.797 -4.773 -3.75 -4.773 -1.878 0 -2.92 0.685 -3.41 1.327V9.273Z" clip-rule="evenodd" stroke-width="1"></path></svg></a>
+                    <a href="{{ linkList.Telegram }}" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24" width="24"><path fill="#bebebe" fill-rule="evenodd" d="M5 1a4 4 0 0 0 -4 4v14a4 4 0 0 0 4 4h14a4 4 0 0 0 4 -4V5a4 4 0 0 0 -4 -4H5Zm15 11a8 8 0 1 1 -16 0 8 8 0 0 1 16 0Zm-13.468 -0.236c0 -0.074 0.049 -0.145 0.118 -0.17l8.963 -3.417a0.185 0.185 0 0 1 0.185 0.034c0.05 0.043 0.072 0.114 0.057 0.179l-1.788 7.518a0.184 0.184 0 0 1 -0.114 0.129 0.184 0.184 0 0 1 -0.17 -0.023l-3.375 -2.718 3.012 -2.702a0.112 0.112 0 0 0 0.017 -0.142 0.112 0.112 0 0 0 -0.139 -0.036l-4.475 2.311 -2.173 -0.793a0.185 0.185 0 0 1 -0.118 -0.17Z" clip-rule="evenodd" stroke-width="1"></path></svg></a>
+                </div>
+                <span class="link"> Last build __ {{ pageInfo.date }}</span>
+                <span> Content update __ {{ pageInfo.content }}</span>
+                <span> Built with __ 11ty & netlify </span>
+                <span> See the <a href="{{ linkList.BuiltWith }}" target="_blank">Github repo</a> for more details</span>
+                <span>Interested in my services?</span>
+                <span> &#8594; <span class="dotted"> {% if pageInfo.available %}Available for new projects! {% else %}Not unavailable for new projects :( {% endif %}</span></span>
+                <span class="link"> 01101001 01110100 00100111 01110011</span>
+                <span> 00100000 01100001 00100000 01110011</span>
+                <span> 01100101 01100011 01110010 01100101</span>
+                <span> 01110100 00100001 </span>
+            </div>
+        </div>
+        <div class="console console__2">
+            <div class="header">
+                <span>User / Welcome.log</span>
+            </div>
+            <div class="body"> 
+                <span>٩(◕‿◕｡)۶  </span>
+                <span class="link"> Welcome to my Portfolio!</span>
+                <span> Name __ Diego Mantegazza</span>
+                <span> Freelance Web Dev __ Designer</span>
+                <span> Based in Milan __ Italy</span>
+                <span> &#8594; 45.611894349, 9.5222516908</span>
+                <span class="link"> 01101000 01100001 01110110 01100101</span>
+                <span> 00100000 01100001 00100000 01101110</span>
+                <span> 01101001 01100011 01100101 00100000</span>
+                <span> 01100100 01100001 01111001 00100000</span>
+                <span> 00111010 00101001</span>
+                <span class="link">[#] <a href="mailto:hello@diegomantegazza.me">hello@diegomantegazza.me</a></span>
+            </div>
+        </div>
+    </div>
+    <div class="hero__style__mobile" aria-hidden="true">
+        <div class="container">
+            <div class="header">
+                <span>
+                    <svg class="rotation" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.6938 8.10921C10.2892 7.50388 9.6343 7.22494 8.99768 7.27124C8.51593 7.30611 8.03817 7.16205 7.69643 6.82023L7.49299 6.61674C6.87694 6.00054 6.87694 5.00196 7.49299 4.38577L7.69643 4.18227C8.03817 3.84045 8.51535 3.6964 8.99711 3.73127C9.6343 3.77757 10.2903 3.49805 10.695 2.89101C11.0978 2.28625 11.1024 1.47171 10.7041 0.864091C10.0286 -0.166516 8.63136 -0.271119 7.81015 0.550851C7.40098 0.95955 7.22268 1.51115 7.27354 2.0456C7.31754 2.51146 7.15124 2.97274 6.82036 3.30371L6.61577 3.50834C5.99972 4.12454 5.00136 4.12454 4.38531 3.50834L4.18187 3.30485C3.84013 2.96303 3.69611 2.48574 3.73097 2.0033C3.77669 1.36653 3.49839 0.711472 2.8932 0.306774C2.28915 -0.097352 1.4748 -0.103066 0.866176 0.294773C-0.166477 0.969269 -0.271626 2.36856 0.550725 3.1911C0.9599 3.60037 1.51137 3.77872 2.04513 3.72785C2.51088 3.68383 2.97206 3.85017 3.30294 4.18113L3.50753 4.38633C4.12358 5.00252 4.12358 6.00112 3.50753 6.61731L3.30409 6.8208C2.96234 7.16263 2.48516 7.30668 2.00284 7.27181C1.36622 7.22551 0.711879 7.50445 0.306704 8.10978C-0.0973275 8.71397 -0.103044 9.52851 0.294702 10.1373C0.969041 11.1702 2.36801 11.2759 3.19036 10.4528C3.59954 10.0435 3.77783 9.4925 3.72697 8.95805C3.68297 8.49219 3.84927 8.0309 4.18015 7.69994L4.38474 7.4953C5.00079 6.87911 5.99916 6.87911 6.6152 7.4953L6.81979 7.69994C7.15067 8.0309 7.31697 8.49219 7.27297 8.95805C7.22211 9.4925 7.40098 10.0435 7.80958 10.4528C8.63193 11.2753 10.0309 11.1702 10.7052 10.1373C11.1024 9.52851 11.0973 8.71397 10.6932 8.10978L10.6938 8.10921Z" fill="#080808"/>
+                    </svg>
+                    User / Welcome.hello
+                </span>
+                 <div class="style__black">
+                <div class="triangle"></div>
+            </div>
+            </div>
+            <div class="body">
+                <div class="image image__1">
+                    <img src="/assets/img/index/hero__mobile__valtrighe__basketball.webp" alt="" loading="lazy">
+                </div>
+                <div class="image image__2">
+                    <img src="/assets/img/index/hero__mobile__giovanni__brambilla.webp" alt="" loading="lazy">
+                </div>
+                <div class="image image__3">
+                    <img src="/assets/img/index/hero__mobile__fratelli__cremonesi.webp" alt="" loading="lazy">
+                </div>
+                <div class="image image__4">
+                    <img src="/assets/img/index/hero__mobile__mantegazza__srl.webp" alt="" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

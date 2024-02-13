@@ -1,0 +1,18 @@
+<section class="design">
+    <div class="design-container">
+        <div class="container">
+            {% for item in range(1,5) %}
+            <a href="{{ linkList.Figma }}" target="_blank">
+                <div class="item item-{{ loop.index }}">
+                    <img src="/assets/img/index/design/other-design-img-{{ loop.index }}.webp" alt="design image number {{ loop.index }}" loading="lazy">
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+        <div class="text">
+            <h2>Check out my <br> <span>designs</span></h2>
+            <p>Explore my Figma page where you can find some non-work related design I made.</p>
+            <a href="{{ linkList.Figma }}" target="_blank">Have a look</a>
+        </div>
+    </div>
+</section>
