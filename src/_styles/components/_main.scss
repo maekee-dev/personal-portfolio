@@ -1,21 +1,25 @@
 @font-face {
     font-family: 'Manrope';
-    src: url(/assets/fonts/Manrope/Manrope-Regular.ttf);
     font-display: swap;
+    font-style: normal;
+    font-weight: 400;
+    src: url(/assets/fonts/Manrope/Manrope.woff2) format('woff2');
 }
 
 @font-face {
     font-family: 'OffBit';
-    src: url(/assets/fonts/OffBit/OffBit-101Bold.otf);
+    src: url(/assets/fonts/OffBit/OffBit-101Bold.woff2) format('woff2');
     font-weight: bold;
     font-display: swap;
+    font-style: normal;
 }
 
 @font-face {
     font-family: 'OffBit';
-    src: url(/assets/fonts/OffBit/OffBit-101.otf);
+    src: url(/assets/fonts/OffBit/OffBit-101.woff2) format('woff2');
     font-weight: 400;
     font-display: swap;
+    font-style: normal;
 }
 
 $text-paragraph-xl: 1.5rem; //24px

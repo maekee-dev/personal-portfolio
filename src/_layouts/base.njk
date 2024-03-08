@@ -55,13 +55,13 @@
       {% include 'scripts/lenisLoading.js' %} 
     </script>
     
-    <script async src="/assets/js/general.js"></script>
+    <script async defer src="/assets/js/general.min.js"></script>
 
     {% for script, module in js %}
-      <script async src="/assets/js/{{ script }}.js" {% if module == true %} type="module" {% endif %}></script>
+      <script async defer src="/assets/js/{{ script }}.min.js" {% if module == true %} type="module" {% endif %}></script>
     {% endfor %}
 
-    <script async>
+    <script async defer>
       let isTouch = 'ontouchstart' in window 
       || navigator.maxTouchPoints > 0 
       || navigator.msMaxTouchPoints > 0
@@ -71,12 +71,12 @@
       })
     </script>
 
-    <script async>
+    <script async defer>
       {% include 'scripts/loadingScreen.js' %}
     </script>
 
     {%if css == 'index' %}
-      <script type="module">
+      <script type="module" async defer>
         {% include 'scripts/indexThreeJS.js' %}
       </script>
     {% endif %}

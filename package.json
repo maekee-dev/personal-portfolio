@@ -1,8 +1,8 @@
 {
-  "name": "personal-portfolio-node",
-  "version": "1.0.0",
-  "description": "",
-  "scripts": {
+    "name": "personal-portfolio-node",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
     "build:clean": "del-cli _site",
     "watch:sass": "sass --watch src/_styles:_site/assets/css",
     "build:sass": "sass src/_styles:_site/assets/css --style compressed",
@@ -10,19 +10,19 @@
     "build:eleventy": "eleventy",
     "start": "npm-run-all build:clean build:sass --parallel watch:*",
     "build": "npm-run-all build:*"
-  },
-  "repository": {
+    },
+    "repository": {
     "type": "git",
     "url": "git+https://github.com/maekee-dev/personal-portfolio.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
     "@11ty/eleventy": "^2.0.1",
     "del-cli": "^5.1.0",
     "html-minifier-terser": "^7.2.0",
     "npm-run-all": "^4.1.5",
     "sass": "^1.66.1"
-  }
+    }
 }
