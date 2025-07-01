@@ -1,4 +1,4 @@
-/*import type { APIRoute } from "astro";
+import type { APIRoute } from "astro";
 
 const robotsTxt = `                                                                                    
 # robots.txt
@@ -16,4 +16,4 @@ export const GET: APIRoute = () => {
             'Content-Type': 'text/plain; charset=utf-8',
         },
     });
-};*/
+};

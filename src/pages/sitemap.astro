@@ -20,7 +20,6 @@ import Base from "@layouts/Base.astro";
     gsap.registerPlugin(TextPlugin);
 
     const heroTl = gsap.timeline({ paused: true })
-    //heroTl.from('#heroTitle span', { opacity: 0, y: 200})
     heroTl.from('#progettiTitle', {text: '#9*$è+'}, '-=.6')
     .from('#progettiBlur', {opacity: 0, duration: .6, delay: .2}, '-=.4')
     .from('#progettiImageContainer [data-progetti-image]', {
