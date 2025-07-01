@@ -1,0 +1,81 @@
+---
+import { Image } from "astro:assets";
+import footerBlur from "@images/index/footer-blur.png";
+const date = new Date();
+---
+
+<footer class="w-full px-normal mt-56 z-20 pb-16 max-w-[1920px] min-4xl:px-12 max-lg:mt-36">
+    <div class="border border-green/20 bg-green-dark/20 flex items-center justify-between  text-green gap-2 px-16 py-12 rounded-2xl max-lg:px-12 max-md:flex-col max-md:items-center max-md:px-0 max-md:py-8">
+        <span class="uppercase max-md:capitalize">Lavoriamo insieme :)</span>
+        <a href="mailto:hello@diegomantegazza.me" class="hover:underline">hello@diegomantegazza.me</a>
+    </div>
+    <div class="rounded-4xl border-green/20 bg-green-dark/20 border mt-8 py-[200px] px-16 flex flex-col gap-12 relative overflow-hidden max-lg:py-16 max-lg:px-12 max-md:px-0 max-md:items-center">
+        <div class="w-full h-[290px] absolute left-0 top-0 pointer-events-none">
+            <Image src={footerBlur} alt="" class="md:object-cover max-md:w-full max-md:h-full max-md:-mt-20" />
+        </div>
+        <div class="w-full h-[290px] absolute left-0 bottom-0 scale-y-[-1] scale-x-[-1] pointer-events-none ">
+            <Image src={footerBlur} alt="" class="md:object-cover max-md:w-full max-md:h-full max-md:-mt-20" />
+        </div>
+        <div class="flex w-full justify-between gap-4 max-md:flex-col max-md:items-center">
+            <span class="uppercase">Contatti</span>
+            <div class="flex flex-col gap-2 items-end max-md:items-center">
+                <a href="" class="uppercase flex gap-2 items-center hover:underline max-md:underline">
+                    <svg data-testid="geist-icon" height="16" stroke-linejoin="round" style="color:currentColor" viewBox="0 0 16 16" width="16"><g clip-path="url(#clip0_872_3147)">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0C3.58 0 0 3.57879 0 7.99729C0 11.5361 2.29 14.5251 5.47 15.5847C5.87 15.6547 6.02 15.4148 6.02 15.2049C6.02 15.0149 6.01 14.3851 6.01 13.7154C4 14.0852 3.48 13.2255 3.32 12.7757C3.23 12.5458 2.84 11.836 2.5 11.6461C2.22 11.4961 1.82 11.1262 2.49 11.1162C3.12 11.1062 3.57 11.696 3.72 11.936C4.44 13.1455 5.59 12.8057 6.05 12.5957C6.12 12.0759 6.33 11.726 6.56 11.5261C4.78 11.3262 2.92 10.6364 2.92 7.57743C2.92 6.70773 3.23 5.98797 3.74 5.42816C3.66 5.22823 3.38 4.40851 3.82 3.30888C3.82 3.30888 4.49 3.09895 6.02 4.1286C6.66 3.94866 7.34 3.85869 8.02 3.85869C8.7 3.85869 9.38 3.94866 10.02 4.1286C11.55 3.08895 12.22 3.30888 12.22 3.30888C12.66 4.40851 12.38 5.22823 12.3 5.42816C12.81 5.98797 13.12 6.69773 13.12 7.57743C13.12 10.6464 11.25 11.3262 9.47 11.5261C9.76 11.776 10.01 12.2558 10.01 13.0056C10.01 14.0752 10 14.9349 10 15.2049C10 15.4148 10.15 15.6647 10.55 15.5847C12.1381 15.0488 13.5182 14.0284 14.4958 12.6673C15.4735 11.3062 15.9996 9.67293 16 7.99729C16 3.57879 12.42 0 8 0Z" fill="currentColor"></path>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_872_3147">
+                        <rect width="16" height="16" fill="white"></rect>
+                        </clipPath>
+                        </defs>
+                    </svg>
+                    Github
+                </a>
+                <a href="" class="uppercase flex gap-2 items-center hover:underline max-md:underline">
+                    <svg data-testid="geist-icon" height="16" stroke-linejoin="round" viewBox="0 0 16 16" width="16" style="color: currentcolor;"><path id="Subtract" fill-rule="evenodd" clip-rule="evenodd" d="M2 0C0.895431 0 0 0.895431 0 2V14C0 15.1046 0.895431 16 2 16H14C15.1046 16 16 15.1046 16 14V2C16 0.895431 15.1046 0 14 0H2ZM5 6.75V13H3V6.75H5ZM5 4.50008C5 5.05554 4.61409 5.5 3.99408 5.5H3.98249C3.38582 5.5 3 5.05554 3 4.50008C3 3.93213 3.39765 3.5 4.00584 3.5C4.61409 3.5 4.98845 3.93213 5 4.50008ZM8.5 13H6.5C6.5 13 6.53178 7.43224 6.50007 6.75H8.5V7.78371C8.5 7.78371 9 6.75 10.5 6.75C12 6.75 13 7.59782 13 9.83107V13H11V10.1103C11 10.1103 11 8.46616 9.7361 8.46616C8.4722 8.46616 8.5 9.93972 8.5 9.93972V13Z" fill="currentColor"></path></svg>
+                    LinkedIn
+                </a>
+                <a href="" class="uppercase flex gap-2 items-center hover:underline max-md:underline">
+                    <svg data-testid="geist-icon" height="16" stroke-linejoin="round" viewBox="0 0 16 16" width="16" style="color: currentcolor;"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 0C3.57757 0 0 3.61682 0 8.03093C0 12.411 3.54999 16 7.9384 16C9.42621 16 10.8841 15.5819 12.1457 14.7934L12.3975 14.636L11.6025 13.364L11.3507 13.5214C10.3275 14.1609 9.14508 14.5 7.9384 14.5C4.38672 14.5 1.5 11.5909 1.5 8.03093C1.5 4.43692 4.4143 1.5 8 1.5C11.5899 1.5 14.5 4.41015 14.5 8V8.60714C14.5 9.3764 13.8764 10 13.1071 10C12.2195 10 11.5 9.28046 11.5 8.39286V8V4.5H10V5.12734C9.43308 4.73191 8.74362 4.5 8 4.5C6.067 4.5 4.5 6.067 4.5 8C4.5 9.933 6.067 11.5 8 11.5C9.05713 11.5 10.0048 11.0313 10.6466 10.2904C11.2148 11.0262 12.1056 11.5 13.1071 11.5C14.7048 11.5 16 10.2048 16 8.60714V8C16 3.58172 12.4183 0 8 0ZM10 8C10 6.89543 9.10457 6 8 6C6.89543 6 6 6.89543 6 8C6 9.10457 6.89543 10 8 10C9.10457 10 10 9.10457 10 8Z" fill="currentColor"></path></svg>
+                    Mail</a>
+                <a href="" class="uppercase flex gap-2 items-center hover:underline max-md:underline">
+                    <svg data-testid="geist-icon" height="16" stroke-linejoin="round" viewBox="0 0 16 16" width="16" style="color: currentcolor;"><path fill-rule="evenodd" clip-rule="evenodd" d="M14.7477 0.293701L0.747695 5.2937L0.730713 6.70002L6.81589 9.04047C6.88192 9.06586 6.93409 9.11804 6.95948 9.18406L9.29994 15.2692L10.7063 15.2523L15.7063 1.25226L14.7477 0.293701ZM7.31426 7.62503L3.15693 6.02605L12.1112 2.8281L7.31426 7.62503ZM8.37492 8.68569L9.9739 12.843L13.1719 3.88876L8.37492 8.68569Z" fill="currentColor"></path></svg>
+                    Telegram</a>
+            </div>
+        </div>
+        <div class="w-full h-[1px] bg-green/10 max-md:bg-gradient-to-r max-md:from-gray/0 max-md:via-gray/10 max-md:to-gray/0 max-md:w-[80%]"></div>
+        <div class="flex w-full justify-between gap-4 max-md:flex-col max-md:items-center">
+            <span class="uppercase">Link utili</span>
+            <div class="flex flex-col gap-2 items-end max-md:items-center">
+                <a href="#top" class="uppercase flex gap-2 items-center hover:underline max-md:underline">
+                    <svg data-testid="geist-icon" height="16" stroke-linejoin="round" style="color:currentColor" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.70711 1.39644C8.31659 1.00592 7.68342 1.00592 7.2929 1.39644L2.21968 6.46966L1.68935 6.99999L2.75001 8.06065L3.28034 7.53032L7.25001 3.56065V14.25V15H8.75001V14.25V3.56065L12.7197 7.53032L13.25 8.06065L14.3107 6.99999L13.7803 6.46966L8.70711 1.39644Z" fill="currentColor"></path></svg>
+                    Back to top
+                </a>
+                <a href="/privacy/" class="uppercase flex gap-2 items-center hover:underline max-md:underline">
+                    <svg data-testid="geist-icon" height="16" stroke-linejoin="round" viewBox="0 0 16 16" width="16" style="color: currentcolor;"><path fill-rule="evenodd" clip-rule="evenodd" d="M14.5 13.5V6.5V5.41421C14.5 5.149 14.3946 4.89464 14.2071 4.70711L9.79289 0.292893C9.60536 0.105357 9.351 0 9.08579 0H8H3H1.5V1.5V13.5C1.5 14.8807 2.61929 16 4 16H12C13.3807 16 14.5 14.8807 14.5 13.5ZM13 13.5V6.5H9.5H8V5V1.5H3V13.5C3 14.0523 3.44772 14.5 4 14.5H12C12.5523 14.5 13 14.0523 13 13.5ZM9.5 5V2.12132L12.3787 5H9.5ZM5.13 5.00062H4.505V6.25062H5.13H6H6.625V5.00062H6H5.13ZM4.505 8H5.13H11H11.625V9.25H11H5.13H4.505V8ZM5.13 11H4.505V12.25H5.13H11H11.625V11H11H5.13Z" fill="currentColor"></path></svg>
+                    Cookie & Privacy
+                </a>
+                <a href="/sitemap/" class="uppercase flex gap-2 items-center hover:underline max-md:underline text-white">
+                    <svg data-testid="geist-icon" height="16" stroke-linejoin="round" viewBox="0 0 16 16" width="16" style="color: currentcolor;"><path d="M5.53468 13.4411C4.73241 12.7283 4.49823 11.2306 4.83247 10.1456C5.41202 10.8297 6.21502 11.0464 7.04678 11.1687C8.33085 11.3575 9.5919 11.2869 10.7847 10.7164C10.9212 10.6511 11.0473 10.5642 11.1964 10.4763C11.3083 10.7919 11.3374 11.1105 11.2984 11.4348C11.2033 12.2247 10.7989 12.8348 10.1557 13.2972C9.89855 13.4822 9.6264 13.6476 9.36077 13.822C8.54473 14.3581 8.32393 14.9867 8.63058 15.9011C8.63787 15.9234 8.64439 15.9457 8.66087 16C8.24422 15.8188 7.93987 15.5549 7.70798 15.2079C7.46305 14.8417 7.34652 14.4366 7.34039 13.9983C7.33733 13.785 7.33733 13.5698 7.30781 13.3595C7.23576 12.8468 6.98814 12.6173 6.52167 12.6041C6.04293 12.5905 5.66423 12.8782 5.5638 13.3312C5.55614 13.3659 5.54503 13.4003 5.53391 13.4407L5.53468 13.4411Z" fill="currentColor" style=""></path>
+                        <path d="M1.5 10.4778C1.5 10.4778 3.69363 9.42783 5.89339 9.42783L7.55193 4.38471C7.61401 4.14081 7.79533 3.97508 8 3.97508C8.20469 3.97508 8.38599 4.14081 8.44809 4.38471L10.1066 9.42783C12.7119 9.42783 14.5 10.4778 14.5 10.4778C14.5 10.4778 10.7739 0.504764 10.7667 0.484756C10.6597 0.1899 10.4792 0 10.2358 0H5.7646C5.5212 0 5.34796 0.1899 5.23372 0.484756C5.22567 0.504387 1.5 10.4778 1.5 10.4778Z" fill="currentColor"></path>
+                        <defs>
+                    </defs></svg>
+                    Sitemap
+                </a>
+            </div>
+        </div>
+        <div class="w-full h-[1px] bg-green/10 max-md:bg-gradient-to-r max-md:from-gray/0 max-md:via-gray/10 max-md:to-gray/0 max-md:w-[80%]"></div>
+        <div class="flex w-full justify-between gap-4 max-md:flex-col max-md:items-center">
+            <span class="uppercase">Mappa sito</span>
+            <div class="flex flex-col gap-2 items-end max-md:items-center">
+                <a href="/" class="uppercase flex gap-2 items-center hover:underline max-md:underline">Home</a>
+                <a href="/progetti/" class="uppercase flex gap-2 items-center hover:underline max-md:underline">Projects</a>
+                <span data-open-contatti class="uppercase flex gap-2 items-center hover:underline max-md:underline cursor-pointer">Contatti</span>
+            </div>
+        </div>
+    </div>
+    <div class="w-full flex items-center justify-between mt-16 px-16 max-lg:px-12 max-lg:mt-12 max-sm:flex-col max-sm:items-center gap-4">
+        <span class="uppercase max-w-[190px] leading-tight max-sm:text-center">©{date.getFullYear()} - Personal Portfolio</span>
+        <span class="uppercase text-right max-w-[150px] leading-tight max-sm:text-center">Code & design by [me &#127892;]</span>
+    </div>
+</footer>

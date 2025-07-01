@@ -1,0 +1,65 @@
+---
+import SlidingCards from "@components/index/SlidingCards.astro";
+---
+<div class="w-full z-20 flex items-center justify-center overflow-hidden pb-56 max-lg:pb-32">
+    <section class="w-full px-normal pt-56 max-w-[1920px] min-4xl:px-12 max-lg:pt-36">
+        <div class="flex justify-between items-end gap-12 max-lg:flex-col max-lg:gap-8 max-md:flex-col-reverse">
+            <div class="flex flex-col gap-24 max-lg:gap-12 max-lg:flex-row-reverse max-lg:items-end max-lg:justify-start max-lg:w-full max-lg:text-right">
+                <span class="uppercase text-gray/40 font-light text-sm">Discovering <br> the world <br> s.1999</span>
+                <span class="uppercase text-gray/40 font-light text-sm">[05] &nbsp;&nbsp; Manifesto</span>
+            </div>
+            <p class="text-[4rem] leading-[110%] max-w-[1240px] font-normal text-right max-2xl:text-5xl max-xl:text-4xl max-xl:text-justify max-xl:leading-tight max-md:text-center max-md:text-3xl">
+                &nbsp;&nbsp;&nbsp;&nbsp;I 
+                <span data-motto-1 class="text-green font-robit">believe</span>
+                in creating solutions that blend with your identity. Personalization is at the hearth of my work, embracing 
+                <span data-motto-2 class="text-green font-robit">modernity</span>
+                to transform your visions into unique and 
+                <span data-motto-3 class="text-green font-robit">authentic</span> 
+                digital experiences.</p>
+        </div>
+    
+        <div class="h-[600px] mt-56 flex items-center justify-center max-[360px]:hidden max-2xl:mt-40 max-lg:mt-30 max-md:mt-10 max-sm:mt-4">
+            <div class="w-full flex items-center justify-end pr-18 max-lg:justify-center max-lg:pr-0">
+                <SlidingCards />
+            </div>
+        </div>
+    </section>
+</div>
+
+<script>
+    import { gsap } from "gsap/gsap-core";
+    import { ScrollTrigger } from "gsap/all";
+    import { TextPlugin } from "gsap/all";
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(TextPlugin);
+
+    gsap.from('[data-motto-1]', {
+        text: 'b*li*v*',
+        scrollTrigger: {
+            trigger: '[data-motto-1]',
+            start: 'bottom bottom',
+            end: 'center center',
+            scrub: true
+        }
+    })
+
+    gsap.from('[data-motto-2]', {
+        text: 'm*d*rnity',
+        scrollTrigger: {
+            trigger: '[data-motto-2]',
+            start: 'bottom bottom',
+            end: 'center center',
+            scrub: true
+        }
+    })
+
+    gsap.from('[data-motto-3]', {
+        text: '**th*ntic',
+        scrollTrigger: {
+            trigger: '[data-motto-3]',
+            start: 'bottom bottom',
+            end: 'center center',
+            scrub: true
+        }
+    })
+</script>

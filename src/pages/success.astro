@@ -1,0 +1,48 @@
+---
+import Base from "@layouts/Base.astro";
+import { Image } from "astro:assets";
+import image from "@images/index/film/cowboy-bebop.gif"
+---
+
+<Base title="Sitemap" description="Sitemap" noIndex={true}>
+    <main class="max-w-[1920px] w-full px-normal items-center min-4xl:px-12 z-20 mt-56 flex flex-col max-md:mt-40">
+        <div class="text-green flex items-center gap-4">
+            <svg data-testid="geist-icon" height="16" stroke-linejoin="round" style="color:currentColor" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" clip-rule="evenodd" d="M16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8ZM11.5303 6.53033L12.0607 6L11 4.93934L10.4697 5.46967L6.5 9.43934L5.53033 8.46967L5 7.93934L3.93934 9L4.46967 9.53033L5.96967 11.0303C6.26256 11.3232 6.73744 11.3232 7.03033 11.0303L11.5303 6.53033Z" fill="currentColor"></path></svg>
+            (OK)
+        </div>
+        <p class="mt-4 max-w-[500px] text-center">La tua richiesta è stata inviata con successo. Ti risponderò il prima possibile :). Nel frattempo, sentiti libero di esplorare i miei 
+            <a href="/progetti/" class="text-green">[Progetti ->]</a>.
+        </p>
+        <a href="/" class="mt-6 bg-green-dark px-2 py-1 rounded-md text-green border border-green/20">[Homepage ->]</a>
+        <div class="mt-16 w-[500px] h-[300px] max-md:h-[50vw] max-md:w-[80vw]">
+            <Image src={image} alt="From movie Wall-e" class="w-full h-full rounded-xl grayscale object-cover" />
+        </div>
+    </main>
+</Base>
+
+<script>
+    import { gsap } from "gsap/gsap-core";
+    import { TextPlugin } from "gsap/all";
+    gsap.registerPlugin(TextPlugin);
+
+    const heroTl = gsap.timeline({ paused: true })
+    //heroTl.from('#heroTitle span', { opacity: 0, y: 200})
+    heroTl.from('#progettiTitle', {text: '#9*$è+'}, '-=.6')
+    .from('#progettiBlur', {opacity: 0, duration: .6, delay: .2}, '-=.4')
+    .from('#progettiImageContainer [data-progetti-image]', {
+        opacity: 0,
+        stagger: .4
+    }, '-=.4')
+    .from('#privacyBanner', {opacity: 0, x: 20}, '-=1.2')
+
+    window.addEventListener("load", () => {
+        document.body.style.overflowY = 'auto'
+        const loadingTl = gsap.timeline({
+            ease: 'none',
+            onComplete: () => {heroTl.play(0)}
+        })
+        loadingTl.to('#textLoading span', { text: '.', border: 'none', stagger: .05}, '-=.4')
+        loadingTl.to(['#loadingBr', '#textLoading p'], {opacity: 0, display: 'none'}, '-=.10')
+        loadingTl.to('#loadingContainer', {opacity: 0, display: 'none'})
+    })
+</script>

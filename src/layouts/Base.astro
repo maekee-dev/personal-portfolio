@@ -1,0 +1,114 @@
+---
+const date = new Date();
+
+import "@styles/global.css";
+import Head from "@components/Head.astro"
+import Header from "@components/Header.astro"
+import Footer from "@components/Footer.astro"
+import Privacy from "@components/Privacy.astro";
+
+interface Props { title?: string, noIndex?: boolean, description?: string, lang?: string }
+const {  title='personal portfolio', noIndex=false, description='',  lang='it' } = Astro.props
+---
+
+<!DOCTYPE html>
+<html lang={ lang }>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<Head title={`Diego • ${title}`} />    
+		<title>diego ~ { title }</title>
+		{description.length > 0 && <meta name="description" content={ description } /> }
+		{noIndex && <meta name="robots" content="noindex" />}
+	</head>
+	<body class="flex flex-col items-center bg-main text-gray font-geist-mono min-w-[320px] min-h-fit relative overflow-y-hidden">
+		<div class="w-full h-[100svh] fixed z-100 top-0 left-0 cursor-auto text-green  flex items-center justify-center overflow-hidden bg-green-dark" style="clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);" id="loadingContainer">
+			<div class="w-full h-full max-w-[1920px] relative">
+				<div class="text-xs z-50 uppercase overflow-hidden whitespace-nowrap absolute font-medium flex flex-col justify-between gap-2 h-[calc(100%-4rem)] top-8 left-8 max-md:h-[calc(100%-2rem)] max-md:top-4 max-md:left-4" id="textLoading">
+					<div>
+						<p id="loadingTopText">Diego Mantegazza <br> Portfolio y. {date.getFullYear()} <br> v.3.0.1</p>
+					</div>
+					<div class="flex flex-col gap-1">
+						<span>&#9658; Connection Established <span class="text-green text-xs uppercase">[ok]</span> </span>
+						<span>&#9658; Personal Profile Loaded <span class="text-green text-xs uppercase">[ok]</span></span>
+						<span>&#9658; Data Flow Secured <span class="text-green text-xs uppercase">[ok]</span></span>
+						<span>&#9658; Assets Retrieved <span class="text-green text-xs uppercase">[ok]</span></span>
+						<span>&#9658; Loading UI ...</span>
+					</div>
+				</div>
+				<div class="absolute z-50 bottom-8 right-8">
+					<div class="flex items-center gap-2 relative" id="loadingBr">
+						<span class="text-xs uppercase text-green">Loading</span>
+						<div class="w-2 h-2 rounded-full bg-green animate-pulse duration-[5ms] mb-[2px]"></div>
+						<div class="absolute w-[4px] h-[4px] bottom-0 -right-2">
+							<div class="absolute h-[4px] w-[.5px] bg-green bottom-0 right-0"></div>
+							<div class="absolute w-[4px] h-[.5px] bg-green bottom-0 right-0"></div>
+						</div>
+						<div class="absolute w-[4px] h-[4px] top-0 -left-2">
+							<div class="absolute h-[4px] w-[.5px] bg-green top-0 left-0"></div>
+							<div class="absolute w-[4px] h-[.5px] bg-green top-0 left-0"></div>
+						</div>
+						<div class="absolute w-[4px] h-[4px] top-0 -right-2">
+							<div class="absolute h-[4px] w-[.5px] bg-green top-0 right-0"></div>
+							<div class="absolute w-[4px] h-[.5px] bg-green top-0 right-0"></div>
+						</div>
+						<div class="absolute w-[4px] h-[4px] bottom-0 -left-2">
+							<div class="absolute h-[4px] w-[.5px] bg-green bottom-0 left-0"></div>
+							<div class="absolute w-[4px] h-[.5px] bg-green bottom-0 left-0"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<Header lang={lang} />
+		<slot />
+		<Footer />
+		<Privacy />
+		
+		<div class="absolute pointer-events-none left-0 top-0 w-full h-full z-10 bg-main"><div data-noise></div></div>
+		<div data-blur class="z-40 w-full h-full pointer-events-none left-0 top-0 absolute bg-main/20 backdrop-blur-md opacity-0"></div>
+		<div data-blur-contatti class="z-[60] w-full h-full pointer-events-none left-0 top-0 absolute bg-main/20 backdrop-blur-md opacity-0"></div>
+		<div class="z-50 cursor"></div>
+	</body>
+</html>
+
+<script>
+	import { gsap } from "gsap";
+
+	gsap.set(".cursor", { xPercent: -50, yPercent: -50 })
+	let targets = gsap.utils.toArray(".cursor");
+	window.addEventListener("mousemove", (e) => {
+		gsap.to(targets, {
+		duration: 0.1,
+		x: e.clientX,
+		y: e.clientY,
+		ease: "power1.out",
+		overwrite: "auto"
+		})
+	})
+
+	const cursorFadeIn = () => {
+		gsap.to('.cursor', { width: 40, height: 40, opacity: .4, duration: .2 });
+	}
+
+	const cursorFadeOut = () => {
+		gsap.to('.cursor', { width: 12, height: 12, opacity: .9, duration: .2 });
+	}
+
+	document.querySelectorAll('a').forEach(link => {
+		link.addEventListener("mouseenter", cursorFadeIn)
+		link.addEventListener("mouseleave", cursorFadeOut)
+	})
+
+	document.querySelectorAll('[data-open-contatti]').forEach(link => {
+		link.addEventListener("mouseenter", cursorFadeIn)
+		link.addEventListener("mouseleave", cursorFadeOut)
+	})
+
+	document.querySelectorAll('[data-menu-trigger]').forEach(link => {
+		link.addEventListener("mouseenter", cursorFadeIn)
+		link.addEventListener("mouseleave", cursorFadeOut)
+	})
+</script>

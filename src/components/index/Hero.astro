@@ -1,0 +1,160 @@
+---
+import Button1 from "@components/Button1.astro";
+import Button2 from "@components/Button2.astro";
+import HeroSviluppo from "./HeroSviluppo.astro";
+
+import { Image } from "astro:assets";
+import heroBlur from "@images/index/hero-blur.png";
+
+---
+
+<section class="w-full px-normal mt-28 py-28 z-20 relative max-w-[1920px] max-2xl:mt-24 max-xl:mt-12 min-4xl:px-12 max-xl:pb-20">
+    <div class="absolute left-0 -top-56 opacity-80 h-fit w-full -z-10 max-2xl:-bottom-[300px] scale-y-[-1] hidden max-lg:flex max-md:-top-42 max-sm:-top-32">
+        <Image src={heroBlur} alt="" loading="eager" class="relative object-contain -z-10" />
+    </div>
+    <div id="heroBlur" class="absolute left-0 -bottom-[450px] h-fit w-full -z-10 max-2xl:-bottom-[300px] min-4xl:hidden max-md:hidden">
+        <Image src={heroBlur} alt="" loading="eager" class="relative object-contain -z-10" />
+    </div>
+    <h1 id="heroTitle" class="text-8xl font-normal font-robit max-w-[1400px] z-20 max-2xl:text-[5.5rem] max-2xl:max-w-[1100px] max-2xl:text-7xl max-xl:text-6xl max-xl:max-w-none max-md:text-5xl max-sm:text-center max-sm:text-[10.5vw] max-xs:">
+        <span class="relative font-medium">
+            <span data-hero-title-1>Progetto</span>
+             <div id="heroImgProgetto" class="absolute right-36 -top-20 -z-10 max-xl:right-auto max-xl:left-18 max-md:hidden max-sm:flex max-sm:left-[15vw]">
+                <svg data-progetto-hero-rotate width="165" height="119" viewBox="0 0 165 119" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.52673 85.9941L21.6172 3.75108L160.647 32.6421L143.557 114.885L4.52673 85.9941Z" stroke="#E3E3E3" stroke-width="0.5" stroke-dasharray="2 2"/>
+                    <circle cx="160.056" cy="33.0299" r="3.5" transform="rotate(11.7392 160.056 33.0299)" fill="#E3E3E3"/>
+                    <circle cx="21.026" cy="4.1389" r="3.5" transform="rotate(11.7392 21.026 4.1389)" fill="#E3E3E3"/>
+                    <circle cx="143.169" cy="114.294" r="3.5" transform="rotate(11.7392 143.169 114.294)" fill="#E3E3E3"/>
+                    <circle cx="4.13901" cy="85.4028" r="3.5" transform="rotate(11.7392 4.13901 85.4028)" fill="#E3E3E3"/>
+                    <line x1="35.7955" y1="54.7117" x2="40.886" y2="30.215" stroke="white" stroke-width="0.5" stroke-dasharray="2 2"/>
+                    <line x1="100.313" y1="42.8247" x2="41.0788" y2="30.5155" stroke="white" stroke-width="0.5" stroke-dasharray="2 2"/>
+                    <rect x="115.06" y="35.4124" width="1.8" height="3.6" transform="rotate(27.6572 115.06 35.4124)" fill="#E3E3E3"/>
+                    <rect x="112.554" y="40.1954" width="1.8" height="3.6" transform="rotate(27.6572 112.554 40.1954)" fill="#E3E3E3"/>
+                    <rect x="114.148" y="41.0309" width="1.8" height="3.6" transform="rotate(-62.3428 114.148 41.0309)" fill="#E3E3E3"/>
+                    <rect x="109.365" y="38.5243" width="1.8" height="3.6" transform="rotate(-62.3428 109.365 38.5243)" fill="#E3E3E3"/>
+                    <rect x="106.129" y="46.9229" width="1.8" height="3.6" transform="rotate(0.265226 106.129 46.9229)" fill="#E3E3E3"/>
+                    <rect x="106.104" y="52.3228" width="1.8" height="3.6" transform="rotate(0.265226 106.104 52.3228)" fill="#E3E3E3"/>
+                    <rect x="107.904" y="52.3312" width="1.8" height="3.6" transform="rotate(-89.7348 107.904 52.3312)" fill="#E3E3E3"/>
+                    <rect x="102.504" y="52.3062" width="1.8" height="3.6" transform="rotate(-89.7348 102.504 52.3062)" fill="#E3E3E3"/>
+                    <circle cx="100.272" cy="42.4456" r="3.5" transform="rotate(18.3992 100.272 42.4456)" fill="#2CDC5B"/>
+                    <circle cx="35.0944" cy="56.2784" r="3.25" transform="rotate(18.3992 35.0944 56.2784)" fill="#0A0A0A" stroke="#E3E3E3" stroke-width="0.5"/>
+                    <rect data-progetto-hero x="48.5149" y="71.9275" width="70" height="15" rx="7.5" fill="#2CDC5B"/>
+                    <path data-progetto-hero d="M58.5469 83.9275V75.4075H61.1869C61.7789 75.4075 62.2949 75.5155 62.7349 75.7315C63.1829 75.9475 63.5269 76.2555 63.7669 76.6555C64.0149 77.0475 64.1389 77.5155 64.1389 78.0595C64.1389 78.6035 64.0149 79.0755 63.7669 79.4755C63.5269 79.8675 63.1829 80.1715 62.7349 80.3875C62.2949 80.5955 61.7789 80.6995 61.1869 80.6995H59.8069V83.9275H58.5469ZM59.8069 79.5115H61.0549C61.6629 79.5115 62.1109 79.3875 62.3989 79.1395C62.6869 78.8915 62.8309 78.5315 62.8309 78.0595C62.8309 77.5795 62.6869 77.2155 62.3989 76.9675C62.1109 76.7195 61.6629 76.5955 61.0549 76.5955H59.8069V79.5115ZM65.7422 83.9275V75.4075H68.3822C68.9742 75.4075 69.4902 75.5155 69.9302 75.7315C70.3782 75.9475 70.7222 76.2555 70.9622 76.6555C71.2102 77.0475 71.3342 77.5155 71.3342 78.0595C71.3342 78.6035 71.2102 79.0755 70.9622 79.4755C70.7222 79.8675 70.3782 80.1715 69.9302 80.3875C69.4902 80.5955 68.9742 80.6995 68.3822 80.6995H67.0022V83.9275H65.7422ZM67.0022 79.5115H68.2502C68.8582 79.5115 69.3062 79.3875 69.5942 79.1395C69.8822 78.8915 70.0262 78.5315 70.0262 78.0595C70.0262 77.5795 69.8822 77.2155 69.5942 76.9675C69.3062 76.7195 68.8582 76.5955 68.2502 76.5955H67.0022V79.5115ZM75.1815 83.9275V77.8555H72.9975V76.7875H74.0775C74.3895 76.7875 74.6415 76.7435 74.8335 76.6555C75.0255 76.5595 75.1655 76.4115 75.2535 76.2115C75.3415 76.0115 75.3855 75.7435 75.3855 75.4075H76.4415V83.9275H75.1815ZM72.5775 83.9275V82.7395H78.4335V83.9275H72.5775ZM81.8848 83.9275V82.3435H83.5168V83.9275H81.8848ZM87.4721 83.9275V75.4075H92.8001V76.5715H88.0121L88.7321 75.8875V79.7995L88.0121 79.1875H92.5841V80.3395H88.0121L88.7321 79.7275V83.9275H87.4721ZM94.4275 83.9275V82.7395H96.4675V76.5955H94.4275V75.4075H99.7555V76.5955H97.7155V82.7395H99.7555V83.9275H94.4275ZM104.275 84.1195C103.659 84.1195 103.115 83.9515 102.643 83.6155C102.171 83.2795 101.799 82.7835 101.527 82.1275C101.255 81.4635 101.119 80.6475 101.119 79.6795C101.119 78.7595 101.247 77.9675 101.503 77.3035C101.759 76.6395 102.123 76.1275 102.595 75.7675C103.075 75.3995 103.647 75.2155 104.311 75.2155C104.847 75.2155 105.319 75.3315 105.727 75.5635C106.135 75.7955 106.475 76.1235 106.747 76.5475C107.027 76.9715 107.227 77.4675 107.347 78.0355L106.039 78.1195C105.919 77.5995 105.715 77.1835 105.427 76.8715C105.147 76.5595 104.779 76.4035 104.323 76.4035C103.923 76.4035 103.579 76.5315 103.291 76.7875C103.011 77.0355 102.795 77.4035 102.643 77.8915C102.499 78.3795 102.427 78.9755 102.427 79.6795C102.427 80.3755 102.503 80.9675 102.655 81.4555C102.807 81.9355 103.027 82.3035 103.315 82.5595C103.611 82.8075 103.967 82.9315 104.383 82.9315C104.751 82.9315 105.067 82.8395 105.331 82.6555C105.595 82.4635 105.799 82.1995 105.943 81.8635C106.095 81.5195 106.179 81.1235 106.195 80.6755H104.323V79.5835H107.359V83.9275H106.339L106.279 81.9715L106.603 81.9595C106.515 82.3675 106.371 82.7355 106.171 83.0635C105.979 83.3915 105.727 83.6515 105.415 83.8435C105.103 84.0275 104.723 84.1195 104.275 84.1195Z" fill="#0A0A0A"/>
+                    <path data-progetto-hero d="M82.7326 55.5228C82.017 54.9472 80.9738 55.4734 80.9738 56.4087V69.1568C80.9738 70.2225 82.2778 70.6902 82.9186 69.8538L85.9627 65.8815C86.075 65.7351 86.218 65.6168 86.381 65.5356C86.5439 65.4543 86.7226 65.4122 86.9036 65.4123H91.8816C92.9191 65.4123 93.3703 64.0572 92.5508 63.4007L82.7326 55.5228Z" fill="#2CDC5B"/>
+                </svg>
+            </div>
+        </span>
+        e
+        <span class="relative font-medium">
+            <span data-hero-title-2>sviluppo</span>
+            <HeroSviluppo />
+        </span>
+        siti web per privati e aziende<span class="text-green">;</span>
+    </h1>
+    <div class="mt-16 flex items-end justify-between z-20 gap-12 max-xl:mt-12 max-lg:flex-col-reverse max-lg:items-start max-sm:items-center max-sm:mt-4">
+        <div class="flex items-center gap-4 max-3xl:flex-col-reverse max-3xl:items-start max-sm:items-center">
+            <button data-open-contatti data-hero-buttons>
+                <Button1 text="Lavoriamo insieme" />
+            </button>
+            <a href="/progetti/" data-hero-buttons>
+                <Button2 text="Progetti" href="/progetti/" />
+            </a>
+        </div>
+        <div class="flex gap-12 max-lg:flex-col-reverse max-sm:flex-col">
+            <div class="max-w-[510px] relative">
+                <p id="heroParagraph" class="text-xl leading-tight max-sm:text-center max-sm:text-base max-xl:text-lg">
+                <span class="text-green uppercase text-sm font-semibold">[sviluppatore~designer]</span>    
+                con l'obiettivo di progettare e costruire siti web moderni, user friendly e visivamente accattivanti utilizzando le migliori tecnologie disponibili.</p>
+            </div>
+            <div id="heroInfo" class="max-w-[510px] self-stretch flex flex-col justify-end gap-4 max-2xl:hidden max-lg:flex max-sm:hidden">
+                <div class="flex gap-1 justify-between items-center">
+                    <div data-open-contatti class="cursor-pointer rounded-full border border-green overflow-hidden relative flex items-center">
+                        <span class="rounded-full bg-green-dark text-green text-xs uppercase flex items-center justify-center px-2">Disponibile :)</span>
+                    </div>
+                    <div class="flex gap-1 justify-between items-center  text-green max-lg:hidden">
+                        {
+                            Array(5).fill(null).map(() => (
+                            <svg data-testid="geist-icon" height="16" stroke-linejoin="round" viewBox="0 0 16 16" width="16" style="color: currentcolor;"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.25 15V11.0311C7.25 10.2613 6.41667 9.78019 5.75 10.1651L2.31287 12.1495L1.56287 10.8505L5.00006 8.86602C5.66673 8.48112 5.66673 7.51886 5.00006 7.13396L1.5629 5.14952L2.3129 3.85048L5.75 5.83489C6.41667 6.21979 7.25 5.73867 7.25 4.96886V1H8.75V4.96894C8.75 5.73874 9.58333 6.21986 10.25 5.83496L13.6872 3.85048L14.4372 5.14952L11.0001 7.13396C10.3334 7.51886 10.3334 8.48112 11.0001 8.86602L14.4373 10.8505L13.6873 12.1495L10.25 10.165C9.58333 9.78012 8.75 10.2612 8.75 11.031V15H7.25Z" fill="currentColor"></path></svg>
+                            ))
+                        }
+                        <span class="ml-1 uppercase text-sm font-medium text-green bg-green-dark px-1">5/5</span>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <div class="flex flex-col gap-1">
+                        <span class="text-sm uppercase text-green flex items-center gap-2">
+                            ~
+                            Sviluppo rapido
+                            <span class="lowercase">[t]</span>
+                        </span>
+                        <span class="text-sm uppercase text-green flex items-center gap-2">
+                            ~
+                            Convenienza
+                            <span class="lowercase">[€]</span>
+                        </span>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <span class="text-sm uppercase text-green flex items-center gap-2">
+                            ~
+                            Personalizzazione
+                            <span class="lowercase">[c]</span>
+                        </span>
+                        <span class="text-sm uppercase text-green flex items-center gap-2">
+                            ~
+                            Passione
+                            <span class="lowercase">[♡]</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script>
+    import { gsap } from "gsap/gsap-core";
+    import { TextPlugin } from "gsap/all";
+    gsap.registerPlugin(TextPlugin)
+
+    const heroTl = gsap.timeline({ paused: true })
+    heroTl.from('#heroImgProgetto', { y: 20, opacity: 0}, '-=.4')
+    .from('#heroImgSviluppo', { y: 20, opacity: 0}, '-=.3')
+        /*.from('[data-hero-title-1]', {text: 'Tporetog', opacity: 1}, '-=.6')
+        .from('[data-hero-title-2]', {text: 'sopviupl', opacity: 1}, '-=.6')
+        .from('[data-hero-buttons]', {y: 20, stagger: .2, opacity: 0}, '-=.3')
+        .from('#heroParagraph', {y: 20, stagger: .2, opacity: 0}, '-=.3')
+        .from('#heroInfo', {y: 20, stagger: .2, opacity: 0}, '-=.3')
+        .from('#heroBlur', {opacity: 0}, '-=1')
+        .from('#privacyBanner', {opacity: 0, x: 20})*/
+            
+
+    window.addEventListener("load", () => {
+        document.body.style.overflowY = 'auto'
+        const loadingTl = gsap.timeline({
+            onComplete: () => {}
+        })
+        loadingTl.to('#textLoading span', { text: '.', border: 'none', stagger: .05}, '-=.4')
+        loadingTl.to(['#loadingBr', '#textLoading p'], {opacity: 0, display: 'none'}, '-=.10')
+        loadingTl.to('#loadingContainer', {opacity: 0, display: 'none'})
+
+        // Faccio partire heroTl 1 secondo prima della fine della loading
+        const loadingDuration = loadingTl.duration();
+        setTimeout(() => heroTl.play(0), (loadingDuration - .5) * 1000);
+    })
+
+    gsap.to('[data-progetto-hero]', {
+        x: -15,
+        duration: 2,
+        yoyo: true,
+        repeat: -1,
+        ease: 'power1.inOut'
+    })
+
+    gsap.to('[data-progetto-hero-rotate]', {
+        rotate: -5,
+        duration: 2,
+        yoyo: true,
+        repeat: -1,
+        ease: 'power1.inOut'
+    })
+</script>

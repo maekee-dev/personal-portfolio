@@ -1,0 +1,51 @@
+---
+interface Props { title: string }
+const { title } = Astro.props
+---
+
+<meta name="generator" content={Astro.generator} />
+<link rel="sitemap" href="/sitemap-index.xml" />
+<meta name="google" content="notranslate" />
+<meta name="author" content="Diego Mantegazza" />
+
+<link rel="icon" type="image/png" href="/ico/favicon-48x48.png" sizes="48x48" />
+<link rel="icon" type="image/svg+xml" href="/ico/favicon.svg" />
+<link rel="shortcut icon" href="/ico/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/ico/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="Diego Mantegazza" />
+<link rel="manifest" href="/ico/site.webmanifest" />
+
+<meta property="og:title" content={title} />
+<meta property="og:url" content={Astro.site} />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="en_US" /> 
+<meta property="og:locale:alternate" content="it_IT" />
+<meta property="og:image" content={`${Astro.site}og-image.png`} />
+<meta property="og:image:url" content={`${Astro.site}og-image.png`} />
+<meta property="og:image:secure_url" content={`${Astro.site}og-image.png`}  />
+<meta property="og:image:alt" content="" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content={`${Astro.site}og-image.png`} />
+<meta name="twitter:site" content="@maekee_" />
+<meta name="twitter:creator" content="@maekee_" />
+<meta name="twitter:url" content={Astro.site} />
+<meta property="twitter:domain" content={Astro.url.host} />
+<meta name="twitter:title" content={title} />
+
+<script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Diego Mantegazza",
+      "jobTitle": "Web Developer, Web Designer",
+      "url": "https://diegomantegazza.me",
+      "sameAs": [
+        "https://www.linkedin.com/in/diegomantegazza/",
+        "https://github.com/maekee-dev"
+      ],
+      "email": "hello@diegomantegazza.me"
+    }
+    </script>

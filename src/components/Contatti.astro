@@ -1,0 +1,115 @@
+---
+import { Image } from "astro:assets";
+import contattiImage from "@images/contatti.gif";
+---
+    
+<div data-contatti class="fixed top-0 -right-[400px] z-[70] h-full w-[700px] shadow-[-5px_0px_6px_-4px_rgba(0,_0,_0,_0.7)] hidden opacity-0 max-md:w-full max-md:shadow-none">
+    <div class="absolute pointer-events-none left-0 top-0 w-full h-full z-10"><div data-noise></div></div>
+    <div class="w-full h-full bg-main p-6 overflow-y-scroll no-scrollbar z-20">
+        <div class="w-full flex justify-end">
+            <button data-close-contatti class="py-1 px-3 rounded-full border-gray/80 border text-xs font-medium uppercase transition-colors hover:bg-gray/10 cursor-pointer">[x] chiudi</button>
+        </div>
+        <span class="text-lg text-green uppercase font-medium font-robit">Ciao&#128075;</span>
+        <p class="mt-2 text-gray/80 leading-tight">Se hai un'idea da sviluppare e cerchi un professionista che possa trasformarla in realtà, sei nel posto giusto. Mi dedico a creare soluzioni ed esperienze digitali uniche, pensate su misura per ogni cliente. Ti invito a dare un'occhiata al mio portfolio [lo hai già fatto?!] e, se lo desideri, a raccontarmi del tuo progetto attraverso il modulo qui sotto.
+            Altrimento puoi usare i contatti elencati. Sarà un piacere collaborare insieme per realizzare qualcosa di speciale! </p>
+        <div class="flex flex-col gap-2 mt-6">
+            <div class="flex items-center gap-4">
+                <span class="text-xs uppercase min-w-[90px]"><span class="text-green">•</span> [telegram]</span>
+                <a href="" class="hover:underline">@dmantee</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <span class="text-xs uppercase min-w-[90px]"><span class="text-green">•</span> [mail]</span>
+                <a href="mailto:hello@diegomantegazza.me" class="hover:underline">hello@diegomantegazza.me</a>
+            </div>
+            <div class="flex wrap gap-2 mt-2">
+                <a href="" class="py-1 px-3 rounded-full bg-green text-main border text-xs font-medium uppercase">LinkedIn</a>
+                <a href="" class="py-1 px-3 rounded-full bg-green text-main border text-xs font-medium uppercase">Figma</a>
+                <a href="" class="py-1 px-3 rounded-full bg-green text-main border text-xs font-medium uppercase">Github</a>
+            </div>
+        </div>
+        <div class="border-t border-green/20 my-8"></div>
+        <p class="text-gray/80">Compila i campi e inviami un messaggio, ti risponderò nel più breve tempo possibile.</p>
+        <form action="https://api.staticforms.xyz/submit" method="POST" class="flex flex-col gap-4 mt-6">
+            <input type="hidden" name="apiKey" value="eb3fd745-11ff-4271-8fbb-9a6619cb740c" />
+            <input type="text" name="honeypot" style="display: none" tabindex="-1" autocomplete="off" />
+            <div class="flex gap-4 w-full max-md:flex-col">
+                <div class="flex flex-col w-1/2 max-md:w-full">
+                    <label for="nome" class="text-xs text-green uppercase">Nome / Nome Azienda (*)</label>
+                    <input required type="text" id="nome" name="nome" placeholder="Tyrell Corporation" class="mt-2 h-[50px] px-4 rounded-lg text-sm placeholder-gray/40 bg-main font-geist-mono  border border-gray/80" />
+                </div>
+                <div class="flex flex-col w-1/2 max-md:w-full">
+                    <label for="email" class="text-xs text-green uppercase">Email (*)</label>
+                    <input required type="email" id="email" name="email" placeholder="info@tyrellcorporation.com" class="mt-2 h-[50px] px-4 rounded-lg text-sm bg-main placeholder-gray/40 font-geist-mono  border border-gray/80" />
+                </div>
+            </div>
+            <div class="flex flex-col w-full">
+                <label for="richiesta" class="text-xs text-green uppercase">Richiesta</label>
+                <select id="richiesta" name="richiesta" class="mt-2 h-[50px] px-4 rounded-lg text-sm placeholder-gray/40 font-geist-mono  border bg-main border-gray/80">
+                    <option value="informazioni" selected>Informazioni</option>
+                    <option value="sviluppo">Sviluppo</option>
+                </select>
+            </div>
+            <div class="flex flex-col w-full">
+                <label for="messaggio" class="text-xs text-green uppercase">Messaggio / Descrizione Progetto (*)</label>
+                <textarea required id="messaggio" name="messaggio" class="mt-2 h-[150px] p-4 rounded-lg text-sm placeholder-gray/40 font-geist-mono  border bg-main border-gray/80 resize-none"
+                placeholder="Vorrei sviluppare un'interfaccia per operazioni fuori protocollo. Progetto Nexus. Specifiche riservate. Encryption consigliata."></textarea>
+            </div>
+            <div class="flex gap-4 w-full">
+                <div class="flex flex-col w-1/2">
+                    <label for="url" class="text-xs text-green uppercase">Hai già un sito?</label>
+                    <input type="url" id="url" name="url" placeholder="https://tyrellcorporation.com" class="mt-2 h-[50px] px-4 rounded-lg text-sm placeholder-gray/40 bg-main font-geist-mono  border border-gray/80" />
+                </div>
+                <div class="flex flex-col w-1/2">
+                    <label for="referral" class="text-xs text-green uppercase">Come mi hai trovato?</label>
+                    <input type="text" id="referral" name="referral" placeholder="Contatto ricevuto da un amico" class="mt-2 h-[50px] px-4 rounded-lg text-sm placeholder-gray/40 bg-main font-geist-mono  border border-gray/80" />
+                </div>
+            </div>
+            <div class="flex items-center gap-2 w-full mt-2">
+                <div class="flex items-center cursor-pointer relative">
+                    <input required type="checkbox" name="privacy" class="peer h-4 w-4 cursor-pointer transition-all appearance-none rounded-[4px] border bg-main border-gray/80 checked:bg-green checked:border-green" id="privacy" />
+                    <span class="absolute text-main opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                      </svg>
+                    </span>
+                </div>
+                <label for="privacy" class="text-xs uppercase pt-[.2rem] text-gray/80">Accetto il trattamento dei dati come indicato nell'<a href="/privacy" class="underline">informativa sulla privacy</a></label>
+            </div>
+            <input type="hidden" name="redirectTo" value="https://diegomantegazza.me/success/">
+            <button type="submit" class="cursor-pointer mt-4 w-full h-[50px] border border-green bg-green/10 rounded-md text-green transition-colors hover:bg-green/20">
+                Invia
+            </button>
+        </form>
+        <div class="border-t border-green/20 my-8"></div>
+        <div class="w-full bg-green-dark max-h-[300px] flex items-center justify-center rounded-lg overflow-hidden">
+            <Image src={contattiImage} alt="" class="w-full h-auto grayscale object-cover object-center" />
+        </div>
+        <div class="mt-8 w-full flex justify-center items-center">
+            <span class="text-xs text-green uppercase font-medium">• end •</span>
+        </div>
+    </div>
+</div>
+
+
+<script>
+	import { gsap } from "gsap";
+
+    let isOpen = false;
+	const manageContatti = () => {
+        if(isOpen){
+            gsap.to('[data-blur-contatti]', { opacity: 0, duration: .2, pointerEvents: 'none' })
+            gsap.to('[data-contatti]', {opacity: 0, display: 'none', x: 400, duration: .2})
+            isOpen = false;
+        }else{
+            gsap.to('[data-blur-contatti]', { opacity: 1, duration: .2, pointerEvents: 'auto' })
+            gsap.to('[data-contatti]', {opacity: 1, display: 'block', x: -400, duration: .3})
+            isOpen = true;
+        }
+	}
+	
+    document.querySelector('[data-blur-contatti]')?.addEventListener('click', manageContatti)
+    document.querySelector('[data-close-contatti]')?.addEventListener('click', manageContatti)
+    document.querySelectorAll('[data-open-contatti]')?.forEach((e:any) => {
+        e.addEventListener('click', manageContatti)
+    })
+</script>

@@ -1,0 +1,60 @@
+---
+import { Image } from "astro:assets";
+import imageAfter from "@images/index/redesign-after.png"
+---
+<section class="w-full px-normal mt-56 z-20 relative">
+    <div class="w-full flex justify-center items-center h-[1000px]">
+        <div data-redesign-after class="w-[900px] h-[600px] border border-gray/80 rounded-[2rem] ml-[200px] mt-[400px] p-2 z-20 backdrop-blur-md">
+            <div class="w-full h-full">
+                <Image src={imageAfter} alt="" class="rounded-3xl object-cover w-full h-full pointer-events-none" />
+            </div>
+        </div>
+        <div data-redesign-before class="w-[900px] h-[600px] border border-gray/80 rounded-[2rem] absolute p-2 -ml-[200px]">
+            <div class="absolute -right-[110px] top-[155px]">
+                <button data-redesign-button class="py-1 px-2 bg-green-dark border border-green-dark rounded-md text-green text-xs flex items-center uppercase">
+                    Visualizza
+                </button>
+            </div>
+            <div class="w-full h-full bg-main-light rounded-3xl">
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    import { gsap } from "gsap";
+    import TextPlugin from "gsap/TextPlugin";
+    gsap.registerPlugin(TextPlugin);
+
+    const destroyImage = gsap.timeline({ paused: true })
+    destroyImage.to('[data-redesign-after]', {x: 5, opacity: 1, duration: .025})
+    .to('[data-redesign-after]', {x: -15, opacity: 0, duration: .025})
+    .to('[data-redesign-after]', {x: 15, opacity: 1, duration: .025})
+    .to('[data-redesign-after]', {x: -15, opacity: 0, duration: .025})
+    .to('[data-redesign-after]', {x: 15, opacity: 1, duration: .025})
+    .to('[data-redesign-after]', {opacity: 0,  display: 'none', duration: .025})
+
+    const visualizeImage = gsap.timeline({ paused: true })
+    visualizeImage.to('[data-redesign-after]', {x: 5, opacity: 1, display: 'block', duration: .025})
+    .to('[data-redesign-after]', {x: -5, opacity: 0, duration: .025})
+    .to('[data-redesign-after]', {x: 5, opacity: 1, duration: .025})
+    .to('[data-redesign-after]', {x: -5, opacity: 0, duration: .025})
+    .to('[data-redesign-after]', {x: 5, opacity: 1, duration: .025})
+    .to('[data-redesign-after]', {opacity: 1, duration: .025})
+
+    let isVisible = true;
+    const setImage = () => {
+        if(isVisible){
+            destroyImage.play(0)
+            gsap.to('[data-redesign-before] button', { backgroundColor: 'rgba(44,200,91,0)', duration: .2 })
+            isVisible = false;
+        }else{
+            visualizeImage.play(0)
+            gsap.to('[data-redesign-before] button', { backgroundColor: 'rgba(44,200,91,.2)', duration: .2 })
+            isVisible = true;
+        }
+    }
+
+    document.querySelector('[data-redesign-button]')?.addEventListener('click', () => { setImage() })
+</script>

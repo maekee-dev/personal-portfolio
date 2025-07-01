@@ -1,0 +1,27 @@
+---
+interface Props {
+    text: string,
+    href?: string
+}
+
+const {text, href} = Astro.props
+---
+
+
+
+<div class="p-1 cursor-pointer border backdrop-blur-md border-gray/40 rounded-full group transition-colors hover:border-gray">
+    <div class="z-20 uppercase text-lg pb-3 pt-4 px-6 border border-gray/40 rounded-full transition-colors hover:border-gray"> 
+        <div class="relative flex flex-col items-center overflow-hidden">
+             <div class="flex">              
+                {text.split('').map((e,i) => (
+                    <span style=`transition-delay: ${i*.01}s;` class="transition-all group-hover:-translate-y-4 group-hover:opacity-0">{e === ' ' ? '\u00A0' : e}</span>
+                ))}
+            </div>
+            <div class="absolute flex mt-4">
+                {text.split('').map((e,i) => (
+                    <span style=`transition-delay: ${i*.01}s;` class="transition-all opacity-0 group-hover:-translate-y-4 group-hover:opacity-100">{e === ' ' ? '\u00A0' : e}</span>
+                ))}
+            </div>
+        </div>       
+    </div>
+</div>

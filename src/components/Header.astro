@@ -1,0 +1,94 @@
+<header class="pt-12 px-normal w-full fixed z-50 max-w-[1920px] min-4xl:px-12 max-md:pt-6">
+    <div class="w-full flex items-center justify-between">
+        <a href="/" class="w-[50px] h-[50px] min-w-[50px] min-h-[50px] rounded-full flex items-center justify-center backdrop-blur-md border border-gray/40 text-gray bg-gray/10 transition-colors hover:bg-gray/20 group">
+            <span class="transition-transform group-hover:rotate-90">••</span>
+        </a>
+        <div class="absolute w-[200px] left-[calc(50%_-_100px)] flex items-center justify-center max-xl:relative max-xl:left-auto">
+            <div class="p-1 border border-gray/40  rounded-full flex flex-col items-center group transition-colors hover:border-gray relative max-md:hidden">
+                <button data-menu-trigger class="uppercase cursor-pointer bg-main/60 backdrop-blur-md text-lg py-3 px-6 border border-gray/60 rounded-full flex items-center gap-2 transition-colors group-hover:border-gray">
+                    <div class="flex flex-col items-center justify-between min-w-[15px] -mt-[-1px] min-h-[11px]">
+                        <div data-menu-trigger-1 class="w-full h-[1px] bg-gray rounded-md"></div>
+                        <div data-menu-trigger-2 class="w-full h-[1px] bg-gray rounded-md transition-all group-hover:w-1/2"></div>
+                        <div data-menu-trigger-3 class="w-full h-[1px] bg-gray rounded-md"></div>
+                    </div>
+                    Menu
+                </button>
+                <div data-menu class="max-w-[700px] min-w-[700px] w-full rounded-3xl border backdrop-blur-md border-gray/60 p-1 absolute mt-[4.5rem] overflow-hidden hidden opacity-0">
+                    <div class="flex gap-2 bg-main rounded-[20px] p-2 overflow-hidden">
+                        <div class="grid grid-cols-2 grid-rows-3 w-1/2 flex-col gap-2">
+                            <a href="/" class=`min-h-[75px] flex items-center justify-center p-3 transition-colors rounded-xl border ${Astro.url.pathname.includes('progetti') ? ' bg-gray/5 hover:bg-gray/10 border-gray/10' : 'bg-green-dark/80 border-green/20 text-green hover:bg-green-dark'}`>
+                                <span class="text-sm uppercase">Home</span>
+                            </a>
+                            <a href="/progetti/" class=`min-h-[75px] flex items-center justify-center p-3 rounded-xl transition-colors border ${!Astro.url.pathname.includes('progetti') ? 'bg-gray/5 hover:bg-gray/10 border-gray/10' : 'bg-green-dark border-green/20 text-green hover:bg-green-dark'}`>
+                                <span class="text-sm uppercase">Progetti</span>
+                            </a>
+                            <a href="/#servizi" data-menu-servizi class="min-h-[75px] flex items-center justify-center p-3 rounded-xl transition-colors hover:bg-gray/5">
+                                <span class="text-sm uppercase">Servizi</span>
+                            </a>
+                            <a href="/#faq" data-menu-faq class="min-h-[75px] flex items-center justify-center p-3 rounded-xl transition-colors hover:bg-gray/5">
+                                <span class="text-sm uppercase">FAQ</span>
+                            </a>
+                            <span data-open-contatti class="cursor-pointer min-h-[75px] flex items-center justify-center p-3 rounded-xl transition-colors hover:bg-gray/5">
+                                <span class="text-sm uppercase">Contatti</span>
+                            </span>
+                            <span class="min-h-[75px] flex items-center justify-center p-3 rounded-xl">
+                                <span class="text-sm uppercase text-gray/40">//</span>
+                            </span>
+                        </div>
+                        <div class="w-1/2 self-stretch relative overflow-hidden">
+                            <div class="absolute h-full w-full bg-gradient-to-r from-green/20 to-blue/20 rounded-xl flex items-center justify-center">
+                                <svg class="animate-pulse" width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M101.185 86.0904C100.799 87.0003 150 82.713 150 82.713C149.738 85.2495 149.366 87.7447 148.857 90.1985C148.347 92.6523 147.727 95.0648 146.997 97.4221C146.997 97.4221 95.4683 94.7753 94.8072 95.4232C94.146 96.0711 141.281 110.932 141.281 110.932C140.124 113.069 138.857 115.136 137.507 117.149C136.157 119.148 134.697 121.092 133.168 122.953C133.168 122.953 86.5151 101.034 85.6749 101.379C84.8347 101.723 122.948 133.168 122.948 133.168C121.088 134.698 119.146 136.146 117.149 137.51C115.138 138.861 113.072 140.13 110.937 141.288C110.937 141.288 75.8953 103.474 74.9724 103.474C74.0496 103.474 97.4242 146.995 97.4242 146.995C95.0689 147.725 92.6584 148.346 90.2066 148.856C87.7548 149.352 85.2617 149.738 82.7273 150C82.7273 150 64.8347 101.599 63.9256 101.213C63.0165 100.827 67.314 150 67.314 150C64.7796 149.738 62.2865 149.366 59.8347 148.856C57.3829 148.36 54.9725 147.739 52.6171 146.995C52.6171 146.995 55.2617 95.5059 54.6143 94.8304C53.9669 94.1687 39.0909 141.288 39.0909 141.288C36.9559 140.13 34.876 138.861 32.8788 137.51C30.8678 136.159 28.9394 134.712 27.0799 133.168C27.0799 133.168 49.0083 86.5316 48.6777 85.6907C48.3333 84.8497 16.8733 122.953 16.8733 122.953C15.3306 121.092 13.8843 119.162 12.5344 117.149C11.1846 115.15 9.91736 113.069 8.76033 110.932C8.76033 110.932 46.5978 75.9167 46.5978 74.9931C46.5978 74.0695 3.00275 97.4083 3.00275 97.4083C2.27273 95.051 1.65289 92.6385 1.14325 90.1847C0.647383 87.7309 0.261708 85.2357 0 82.6992C0 82.6992 48.4297 64.8056 48.8154 63.9096C49.2011 63.0135 0 67.287 0 67.287C0.261708 64.7505 0.633609 62.2553 1.14325 59.8015C1.63912 57.3477 2.27273 54.9352 3.00275 52.5779C3.00275 52.5779 54.5317 55.2247 55.1928 54.5768C55.854 53.9289 8.71901 39.0681 8.71901 39.0681C9.87603 36.9313 11.1432 34.8635 12.4931 32.8508C13.843 30.8519 15.303 28.9082 16.832 27.0471C16.832 27.0471 63.4848 48.9661 64.3251 48.6215C65.1653 48.2768 27.0523 16.8321 27.0523 16.8321C28.9118 15.3019 30.854 13.8544 32.8512 12.4897C34.8623 11.1387 36.9284 9.87042 39.0634 8.71244C39.0634 8.71244 74.1047 46.5261 75.0275 46.5261C75.9504 46.5261 52.5758 3.00524 52.5758 3.00524C54.9311 2.27461 57.3416 1.65426 59.7934 1.1442C62.2452 0.647918 64.7383 0.261924 67.2727 0C67.2727 0 85.1653 48.4009 86.0744 48.7869C86.9835 49.1729 82.6997 0.0413565 82.6997 0.0413565C85.2342 0.303281 87.7273 0.675489 90.1791 1.18555C92.6309 1.68183 95.0413 2.30218 97.3967 3.0466C97.3967 3.0466 94.7521 54.5354 95.3994 55.2109C96.0468 55.8864 110.923 8.75379 110.923 8.75379C113.058 9.91177 115.138 11.18 117.135 12.531C119.146 13.882 121.074 15.3295 122.934 16.8734C122.934 16.8734 101.006 63.5098 101.336 64.3507C101.667 65.1916 133.14 27.0885 133.14 27.0885C134.683 28.9495 136.129 30.8795 137.479 32.8922C138.829 34.8911 140.096 36.9727 141.253 39.1095C141.253 39.1095 103.416 74.1246 103.416 75.0482C103.416 75.9719 146.97 52.6192 146.97 52.6192C147.7 54.9766 148.32 57.389 148.829 59.8428C149.325 62.2967 149.711 64.7918 149.972 67.3284C149.972 67.3284 101.543 85.2219 101.157 86.118L101.185 86.0904Z" fill="#E3E3E3"/>
+                                </svg>
+                            </div>
+                            <div class="absolute bottom-2 right-2 flex items-center gap-2">
+                                <a href="https://github.com/maekee-dev/" class="uppercase text-[10px] bg-main/40 backdrop-blur-md px-3 py-1 rounded-full">Github</a>
+                                <a href="/privacy/" class="uppercase text-[10px] bg-main/40 backdrop-blur-md px-3 py-1 rounded-full">Privacy</a>
+                            </div>
+                            <a href="#top" data-menu-top class="absolute top-2 right-2 uppercase text-[10px] bg-main/40 backdrop-blur-md px-3 py-1 rounded-full">Back to top</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <button class="cursor-pointer">
+                <div class="p-1 border border-gray/60 rounded-full flex gap-1 transition-colors group hover:border-gray max-xl:border-green/60">
+                    <span data-open-contatti class="uppercase text-lg py-3 px-5 border border-gray/60 rounded-full backdrop-blur-md bg-main/60 flex items-center gap-2 transition-colors group-hover:border-gray max-xl:hidden">
+                        Contatti
+                    </span>
+                    <span data-open-contatti class="uppercase text-lg py-3 px-5 border border-green bg-green-dark rounded-full text-green transition-all group-hover:px-6">Sviluppiamo</span>
+                </div>
+            </button>
+        </div>
+    </div>
+</header>
+
+<script>
+    import { gsap } from "gsap";
+
+    let isOpen = false;
+    const manageMenu = () => {
+        if(isOpen){
+            gsap.to('[data-blur]', { opacity: 0, duration: .2, pointerEvents: 'none' })
+            gsap.to('[data-menu]', { display: 'none', opacity: 0, duration: .2 })
+            gsap.to('[data-menu-trigger-1]', { rotate: 0, y: 0, duration: .2 })
+            gsap.to('[data-menu-trigger-2]', { opacity: 1, duration: .2 })
+            gsap.to('[data-menu-trigger-3]', { rotate: 0, y: 0, duration: .2 })
+            isOpen = false
+        }else{
+            gsap.to('[data-blur]', { opacity: 1, duration: .2, pointerEvents: 'auto' })
+            gsap.to('[data-menu]', { display: 'block', opacity: 1, duration: .2 })
+            gsap.to('[data-menu-trigger-1]', { rotate: 45, y: 5, duration: .2 })
+            gsap.to('[data-menu-trigger-2]', { opacity: 0, duration: .2 })
+            gsap.to('[data-menu-trigger-3]', { rotate: -45, y: -5, duration: .2 })
+            isOpen = true;
+        }
+    }
+
+    document.querySelector('[data-menu-trigger]')?.addEventListener('click', manageMenu)
+    document.querySelector('[data-menu-servizi]')?.addEventListener('click', manageMenu)
+    document.querySelector('[data-menu-faq]')?.addEventListener('click', manageMenu)
+    document.querySelector('[data-blur]')?.addEventListener('click', manageMenu)
+    document.querySelector('[data-menu-top]')?.addEventListener('click', manageMenu)
+</script>

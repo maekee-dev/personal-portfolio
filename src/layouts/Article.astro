@@ -1,0 +1,22 @@
+---
+import Base from '@layouts/Base.astro';
+
+const { titolo, href, nome } = Astro.props
+---
+
+<Base>
+    <section class="z-20 w-full mt-40 px-normal flex flex-col items-center">
+        <div class="w-full max-w-[1024px]">
+            <div class="w-full h-[500px] bg-green rounded-xl overflow-hidden"></div>
+            <div class="w-full flex items-center justify-between mt-8 uppercase text-sm">
+                <span>
+                    <a href="/progetti/" class="hover:underline" target="_blank">progetti</a>
+                    / {nome}
+                </span>
+                <a href={href} class="hover:underline text-green text-sm font-medium">Visita il sito</a>
+            </div>
+            <h1 class="text-6xl font-medium my-8">{titolo}</h1>
+            <slot></slot>
+        </div>
+    </section>
+</Base>

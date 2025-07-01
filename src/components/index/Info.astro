@@ -1,0 +1,146 @@
+---
+import { Image } from "astro:assets";
+import leftBlur from "@images/index/faq-blur-left.png";
+import rightBlur from "@images/index/faq-blur-right.png";
+import infoImage1 from "@images/index/info-image-1.png";
+import infoImage2 from "@images/index/info-image-2.png";
+import infoImage3 from "@images/index/info-image-3.png";
+import Button1 from "@components/Button1.astro";
+---
+
+<section class="w-full px-normal mt-56 z-20 relative min-4xl:px-12 max-lg:mt-36">
+    <div id="infoBlur" class="absolute top-[calc(50%_-_570px)] left-0 overflow-hidden h-[1120px] w-full pointer-events-none scale-x-[-1]">
+        <div class="absolute -left-8 top-0 opacity-80 max-xl:-left-48 max-md:-left-64 max-md:-top-[28rem]">
+            <Image src={leftBlur} alt="" class="relative object-contain -z-20" />
+        </div>
+        <div class="absolute -right-8 top-0 opacity-80 max-xl:-right-48 max-md:-right-64 max-md:top-[6rem]">
+            <Image src={rightBlur} alt="" class="relative object-contain -z-10" />
+        </div>
+    </div>
+    <div class="w-full flex flex-col items-center justify-center">
+        <h2 class="text-5xl font-regular font-robit max-w-[400px] text-center max-lg:text-4xl">
+            Perché <br><span data-info-title class="font-medium">scegliermi</span>?
+        </h2>
+        <div class="w-full flex flex-col items-center mt-8 max-md:px-4">
+            <div class="z-10 w-[11px] h-[11px] border border-gray/10 rounded-full mb-[-4px]"></div>
+            <div class="z-10 w-[1px] h-24 bg-gradient-to-b from-gray/10 to-gray/0 mt-[4px]"></div>
+            <div id="infoContainer1" class="z-20 flex flex-col gap-1 max-w-[525px] relative -ml-[100px] my-4 group max-xl:ml-0 max-md:items-center max-md:text-center">
+                <div class="absolute w-[16px] h-[16px] top-[calc(50%_-_8px)] -left-12 border border-green rounded-full bg-green-dark max-md:hidden">
+                    <div class="rounded-full w-full h-full text-green text-xs font-medium flex items-center justify-center">1</div>
+                </div>
+                <div class="w-[150px] h-[150px] absolute -right-[100px] -top-[75px] rounded-md -z-10 flex items-center justify-center transition-transform -rotate-6 group-hover:rotate-6 max-lg:-right-[25px] max-sm:right-auto max-sm:w-[100px] max-sm:h-[100px] max-sm:-top-[50px]">
+                    <Image src={infoImage1} id="infoImage1" alt="" class="object-cover w-full h-full rounded-md z-20 relative" />
+                </div>
+                <div class="absolute w-[10px] h-[10px] -top-2 -left-3 transition-all group-hover:-top-3 group-hover:-left-4">
+                    <div class="absolute h-[10px] w-[.5px] bg-green top-0 left-0"></div>
+                    <div class="absolute w-[10px] h-[.5px] bg-green top-0 left-0"></div>
+                </div>
+                <div class="absolute w-[10px] h-[10px] -bottom-2 -right-3 transition-all group-hover:-bottom-3 group-hover:-right-4">
+                    <div class="absolute h-[10px] w-[.5px] bg-green bottom-0 right-0"></div>
+                    <div class="absolute w-[10px] h-[.5px] bg-green bottom-0 right-0"></div>
+                </div>
+                <h3 class="font-semibold uppercase text-green flex items-center gap-2">
+                    <svg data-testid="geist-icon" class="mb-[3px]" height="16" stroke-linejoin="round" viewBox="0 0 16 16" width="16" style="color: currentcolor;"><path d="M7.99999 0.489502L10.5734 5.20807L15.8562 6.19736L12.1638 10.1029L12.8554 15.4329L7.99999 13.1281L3.1446 15.4329L3.83621 10.1029L0.143799 6.19736L5.42663 5.20807L7.99999 0.489502Z" fill="currentColor"></path></svg>
+                    Servizio di qualità •
+                </h3>
+                <p class="text-sm">Mi impegno a fornire soluzioni web di alta qualità, utilizzando le tecnologie più moderne e rispettando gli standard del settore. Ogni progetto viene sviluppato con attenzione meticolosa ai dettagli, garantendo siti web veloci, responsivi e ottimizzati per i motori di ricerca.</p>
+            </div>
+            <div class="z-10 w-[1px] h-24 bg-gradient-to-b from-gray/0 to-gray/0 via-gray/10 mt-[4px] max-md:h-16"></div>
+            <div id="infoContainer2" class="z-20 flex flex-col gap-1 max-w-[525px] relative ml-[200px] my-4 group max-xl:ml-0 max-md:items-center max-md:text-center">
+                <div class="absolute w-[16px] h-[16px] top-[calc(50%_-_8px)] -left-12 border border-green rounded-full bg-green-dark max-md:hidden">
+                    <div class="rounded-full w-full h-full text-green text-xs font-medium flex items-center justify-center">2</div>
+                </div>
+                <div class="w-[150px] h-[150px] absolute -right-[100px] -top-[75px] rounded-md -z-10 transition-transform -rotate-2 group-hover:rotate-2 max-lg:-right-[25px] max-sm:right-auto max-sm:w-[100px] max-sm:h-[100px] max-sm:-top-[50px]">
+                    <Image src={infoImage2} id="infoImage2" alt="" class="object-cover w-full h-full rounded-md opacity-20" />
+                </div>
+                <div class="absolute w-[10px] h-[10px] -top-2 -left-3 transition-all group-hover:-top-3 group-hover:-left-4">
+                    <div class="absolute h-[10px] w-[.5px] bg-green top-0 left-0"></div>
+                    <div class="absolute w-[10px] h-[.5px] bg-green top-0 left-0"></div>
+                </div>
+                <div class="absolute w-[10px] h-[10px] -bottom-2 -right-3 transition-all group-hover:-bottom-3 group-hover:-right-4">
+                    <div class="absolute h-[10px] w-[.5px] bg-green bottom-0 right-0"></div>
+                    <div class="absolute w-[10px] h-[.5px] bg-green bottom-0 right-0"></div>
+                </div>
+                <h3 class="font-semibold uppercase text-green flex items-center gap-2">
+                    <svg data-testid="geist-icon" height="16" stroke-linejoin="round" viewBox="0 0 16 16" width="16" style="color: currentcolor;"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.5015 3.85991L11.0459 4.45567L7.70569 8.82361L7.29118 8.4091L6.63564 7.75356L9.85434 3.5445L10.3099 2.94873L11.5015 3.85991ZM4.1092 11.5911L4.9023 12.3842C4.2256 12.8947 3.24471 12.8554 2.61219 12.223L0.669181 10.2804L0.138794 9.75014L1.19934 8.68937L1.72973 9.21964L3.67274 11.1622C3.68536 11.1748 3.69895 11.1858 3.71326 11.1951L4.1092 11.5911ZM15.296 4.45568L15.7515 3.85991L14.56 2.94874L14.1044 3.54451L8.29816 11.1373C8.20632 11.2574 8.02973 11.2691 7.92281 11.1623L5.97971 9.21964L5.44932 8.68937L4.38879 9.75017L4.91918 10.2804L6.86228 12.223C7.6107 12.9713 8.84683 12.8892 9.48969 12.0485L15.296 4.45568Z" fill="currentColor"></path></svg>
+                    Personalizzazione Completa ••
+                </h3>
+                <p class="text-sm">Ogni business è unico e merita un sito web che ne rifletta l'identità. Lavoro a stretto contatto con i clienti per creare design su misura che si adattano perfettamente alle loro esigenze, obiettivi e brand identity. Niente template preconfezionati, solo soluzioni autenticamente personalizzate.</p>
+            </div>
+            <div class="z-10 relative w-[1px] h-24 bg-gradient-to-b from-gray/0 to-gray/0 via-gray/10 mt-[4px] max-md:h-16"></div>
+            <div id="infoContainer3" class="z-20 flex flex-col gap-1 max-w-[525px] relative my-4 group max-md:items-center max-md:text-center">
+                <div class="absolute w-[16px] h-[16px] top-[calc(50%_-_8px)] -left-12 border border-green rounded-full bg-green-dark max-md:hidden">
+                    <div class="rounded-full w-full h-full text-green text-xs font-medium flex items-center justify-center">3</div>
+                </div>
+                <div class="w-[150px] h-[150px] absolute -right-[100px] -top-[75px] rounded-md -z-10 transition-transform rotate-6 group-hover:-rotate-6 max-lg:-right-[25px] max-sm:right-auto max-sm:w-[100px] max-sm:h-[100px] max-sm:-top-[50px]">
+                    <Image src={infoImage3} id="infoImage3" alt="" class="object-cover w-full h-full rounded-md grayscale opacity-60" />
+                </div>
+                <div class="absolute w-[10px] h-[10px] -top-2 -left-3 transition-all group-hover:-top-3 group-hover:-left-4">
+                    <div class="absolute h-[10px] w-[.5px] bg-green top-0 left-0"></div>
+                    <div class="absolute w-[10px] h-[.5px] bg-green top-0 left-0"></div>
+                </div>
+                <div class="absolute w-[10px] h-[10px] -bottom-2 -right-3 transition-all group-hover:-bottom-3 group-hover:-right-4">
+                    <div class="absolute h-[10px] w-[.5px] bg-green bottom-0 right-0"></div>
+                    <div class="absolute w-[10px] h-[.5px] bg-green bottom-0 right-0"></div>
+                </div>
+                <h3 class="font-semibold uppercase text-green flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-dollar-sign-icon lucide-dollar-sign"><line x1="12" x2="12" y1="2" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    Convenienza •••
+                </h3>
+                <p class="text-sm">Offro soluzioni competitive senza compromettere la qualità. Il sito web che realizzerò sarà completamente di tua proprietà: riceverai tutti i file sorgente e avrai il pieno controllo del tuo progetto. Nessun costo nascosto o vincolo di hosting - sei tu il proprietario al 100% del tuo sito.</p>
+            </div>
+        </div>
+        <div class="w-[1px] h-24 bg-gradient-to-b from-gray/0 to-gray/10 mt-[4px]"></div>
+        <button data-open-contatti class="-mt-1">
+            <Button1 text="Sentiamoci :)" href="#" />
+        </button>
+    </div>
+</section>
+
+<script>
+    import { gsap } from "gsap";
+    import { ScrollTrigger } from "gsap/all";
+    import { TextPlugin } from "gsap/all";
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(TextPlugin);
+
+    gsap.from('#infoImage1', {
+        opacity: 0,
+        y: 20,
+        ease: 'none',
+        scrollTrigger: {
+            trigger: '#infoContainer1',
+            start: 'bottom bottom'
+        }
+    })
+
+    gsap.from('#infoImage2', {
+        opacity: 0,
+        y: 20,
+        ease: 'none',
+        scrollTrigger: {
+            trigger: '#infoContainer2',
+            start: 'bottom bottom'
+        }
+    })
+
+    gsap.from('#infoImage3', {
+        opacity: 0,
+        y: 20,
+        ease: 'none',
+        scrollTrigger: {
+            trigger: '#infoContainer3',
+            start: 'bottom bottom'
+        }
+    })
+
+    gsap.from('[data-info-title]', {
+        text: 'mrleiigces',
+        scrollTrigger: {
+            trigger: '[data-info-title]',
+            start: 'bottom bottom',
+            end: 'center center',
+            scrub: true
+        }
+    })
+</script>

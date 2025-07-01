@@ -1,0 +1,149 @@
+
+---
+import { Image } from "astro:assets";
+import leftBlur from "@images/index/faq-blur-left.png";
+import rightBlur from "@images/index/faq-blur-right.png";
+---
+
+<section class="w-full px-normal mb-24 mt-56 z-20 relative min-4xl:px-12 max-lg:mt-36 max-lg:mb-0" id="faq">
+    <div class="absolute top-[calc(50%_-_550px)] left-0 overflow-hidden h-[1100px] w-full pointer-events-none">
+        <div class="absolute -left-8 -top-8 opacity-80 max-xl:-left-48 max-md:-left-64 max-md:-top-[28rem]">
+            <Image src={leftBlur} alt="" class="relative object-contain -z-10" />
+        </div>
+        <div class="absolute -right-8 -top-8 opacity-80 max-xl:-right-48 max-md:-right-64 max-md:top-[6rem]">
+            <Image src={rightBlur} alt="" class="relative object-contain -z-10" />
+        </div>
+    </div>
+    <div class="w-full flex flex-col items-center justify-center">
+        <h2 class="text-5xl font-normal text-center font-robit max-lg:text-4xl">Qualche <br><span data-faq-title class="font-medium">domanda</span>?</h2>
+        <div class="max-w-[700px] w-full flex flex-col items-center gap-8 mt-16">
+            <div data-faq-0 class="flex items-start gap-8 rounded-xl w-full cursor-pointer max-sm:gap-4">
+                <div class="min-w-[20px] min-h-[20px] flex items-center max-sm:mt-[2px]">
+                    <svg data-eye-open class="absolute" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M19.6865 8.10143C19.9988 8.29656 20.0937 8.70787 19.8985 9.02008C19.3132 9.95672 18.6176 10.8087 17.8269 11.5509L19.4283 13.1522C19.6885 13.4125 19.6885 13.8347 19.4283 14.0951C19.1679 14.3553 18.7457 14.3553 18.4855 14.0951L16.8015 12.411C15.74 13.2039 14.5452 13.8163 13.245 14.2015L13.844 16.4371C13.9392 16.7927 13.7281 17.1581 13.3725 17.2535C13.0169 17.3488 12.6513 17.1377 12.5561 16.7821L11.9456 14.5035C11.3166 14.6108 10.6671 14.6667 10 14.6667C9.33287 14.6667 8.68343 14.6108 8.05443 14.5035L7.44399 16.782C7.34871 17.1377 6.98316 17.3488 6.62752 17.2535C6.27187 17.1583 6.0608 16.7927 6.15608 16.4371L6.755 14.2015C5.45481 13.8163 4.26004 13.2039 3.19853 12.411L1.51453 14.0951C1.25418 14.3553 0.832077 14.3553 0.571731 14.0951C0.311383 13.8347 0.311383 13.4125 0.571731 13.1522L2.17309 11.5509C1.38243 10.8087 0.686817 9.95671 0.101424 9.02008C-0.0937156 8.70787 0.00119803 8.29656 0.31342 8.10143C0.625641 7.90628 1.03694 8.0012 1.23208 8.31343C1.87139 9.33632 2.652 10.2409 3.54977 10.9904C3.5642 11.0014 3.57827 11.0131 3.59196 11.0255C5.34529 12.4738 7.54049 13.3334 10 13.3334C13.7437 13.3334 16.8752 11.3419 18.768 8.31341C18.9631 8.0012 19.3744 7.90628 19.6865 8.10143Z" fill="#E3E3E3"/>
+                    </svg>        
+                    <svg data-eye-close class="opacity-0" width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10 10.6667C6.4038 10.6667 3.37269 8.82912 1.46163 6.00001C3.37269 3.17088 6.4038 1.33333 10 1.33333C13.5961 1.33333 16.6273 3.17088 18.5384 6.00001C16.6273 8.82911 13.5961 10.6667 10 10.6667ZM10 0C5.74381 0 2.20852 2.27517 0.101334 5.64668C-0.0337784 5.86287 -0.0337779 6.13717 0.101335 6.35335C2.20852 9.7248 5.74381 12 10 12C14.2561 12 17.7915 9.7248 19.8987 6.35335C20.0337 6.13717 20.0337 5.86287 19.8987 5.64668C17.7915 2.27517 14.2561 0 10 0ZM10 8.66667C11.4728 8.66667 12.6667 7.47276 12.6667 6C12.6667 4.52724 11.4728 3.33333 10 3.33333C8.52724 3.33333 7.33333 4.52724 7.33333 6C7.33333 7.47276 8.52724 8.66667 10 8.66667Z" fill="#E3E3E3"/>
+                    </svg>                
+                </div>
+                <div>
+                    <h3 class="font-medium">Quali tecnologie utilizzi per il design e lo sviluppo dei siti?</h3>
+                    <p class="mt-4 text-gray/80">
+                        Progetto i siti web con <span class="font-medium px-1 bg-green-dark text-green uppercase text-xs">Figma</span>, mentre per quanto riguarda lo sviluppo
+                        il mio stack principale è composto da
+                        <span class="font-medium px-1 bg-green-dark text-green uppercase text-xs">Astro JS</span>,
+                        <span class="font-medium px-1 bg-green-dark text-green uppercase text-xs">Tailwind CSS</span> e 
+                        <span class="font-medium px-1 bg-green-dark text-green uppercase text-xs">Cloudflare</span>
+                        o un VPS per l'hosting web. In alternativa, posso lavorare con
+                        <span class="font-medium px-1 bg-green-dark text-green uppercase text-xs">Framer</span>
+                        o altre tecnologie concordate con il cliente, incluso 
+                        <span class="font-medium px-1 bg-green-dark text-green uppercase text-xs">Wordpress</span>.
+                    </p>
+                </div>
+            </div>
+
+            <div data-faq-1 class="flex items-start gap-8 rounded-xl w-full cursor-pointer max-sm:gap-4">
+                <div class="min-w-[20px] min-h-[20px] flex items-center max-sm:mt-[2px]">
+                    <svg data-eye-open class="absolute opacity-0" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M19.6865 8.10143C19.9988 8.29656 20.0937 8.70787 19.8985 9.02008C19.3132 9.95672 18.6176 10.8087 17.8269 11.5509L19.4283 13.1522C19.6885 13.4125 19.6885 13.8347 19.4283 14.0951C19.1679 14.3553 18.7457 14.3553 18.4855 14.0951L16.8015 12.411C15.74 13.2039 14.5452 13.8163 13.245 14.2015L13.844 16.4371C13.9392 16.7927 13.7281 17.1581 13.3725 17.2535C13.0169 17.3488 12.6513 17.1377 12.5561 16.7821L11.9456 14.5035C11.3166 14.6108 10.6671 14.6667 10 14.6667C9.33287 14.6667 8.68343 14.6108 8.05443 14.5035L7.44399 16.782C7.34871 17.1377 6.98316 17.3488 6.62752 17.2535C6.27187 17.1583 6.0608 16.7927 6.15608 16.4371L6.755 14.2015C5.45481 13.8163 4.26004 13.2039 3.19853 12.411L1.51453 14.0951C1.25418 14.3553 0.832077 14.3553 0.571731 14.0951C0.311383 13.8347 0.311383 13.4125 0.571731 13.1522L2.17309 11.5509C1.38243 10.8087 0.686817 9.95671 0.101424 9.02008C-0.0937156 8.70787 0.00119803 8.29656 0.31342 8.10143C0.625641 7.90628 1.03694 8.0012 1.23208 8.31343C1.87139 9.33632 2.652 10.2409 3.54977 10.9904C3.5642 11.0014 3.57827 11.0131 3.59196 11.0255C5.34529 12.4738 7.54049 13.3334 10 13.3334C13.7437 13.3334 16.8752 11.3419 18.768 8.31341C18.9631 8.0012 19.3744 7.90628 19.6865 8.10143Z" fill="#E3E3E3"/>
+                    </svg>        
+                    <svg data-eye-close width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10 10.6667C6.4038 10.6667 3.37269 8.82912 1.46163 6.00001C3.37269 3.17088 6.4038 1.33333 10 1.33333C13.5961 1.33333 16.6273 3.17088 18.5384 6.00001C16.6273 8.82911 13.5961 10.6667 10 10.6667ZM10 0C5.74381 0 2.20852 2.27517 0.101334 5.64668C-0.0337784 5.86287 -0.0337779 6.13717 0.101335 6.35335C2.20852 9.7248 5.74381 12 10 12C14.2561 12 17.7915 9.7248 19.8987 6.35335C20.0337 6.13717 20.0337 5.86287 19.8987 5.64668C17.7915 2.27517 14.2561 0 10 0ZM10 8.66667C11.4728 8.66667 12.6667 7.47276 12.6667 6C12.6667 4.52724 11.4728 3.33333 10 3.33333C8.52724 3.33333 7.33333 4.52724 7.33333 6C7.33333 7.47276 8.52724 8.66667 10 8.66667Z" fill="#E3E3E3"/>
+                    </svg>                 
+                </div>
+                <div>
+                    <h3 class="font-medium">Come sono strutturate le fasi dello sviluppo di un sito web?</h3>
+                    <p class="mt-4 hidden text-gray/80">Il processo di sviluppo si divide in tre fasi principali.  <br>
+                        <span class="font-medium px-1 bg-green-dark text-green uppercase text-xs">Design</span>: creazione del layout e dell'interfaccia UI con uno stile moderno e concordato con il cliente (design review). <br>
+                        <span class="font-medium px-1 bg-green-dark text-green uppercase text-xs">Sviluppo</span>: programmazione del sito con le tecnologie concordate, includendo le richieste specifiche del cliente.  <br>
+                        <span class="font-medium px-1 bg-green-dark text-green uppercase text-xs">Pubblicazione</span>: lancio del sito online sulla piattaforma più opportuna al minor costo possibile.</p>
+                </div>
+            </div>
+
+            <div data-faq-2 class="flex items-start gap-8 rounded-xl w-full cursor-pointer max-sm:gap-4">
+                <div class="min-w-[20px] min-h-[20px] flex items-center max-sm:mt-[2px]">
+                    <svg data-eye-open class="absolute opacity-0" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M19.6865 8.10143C19.9988 8.29656 20.0937 8.70787 19.8985 9.02008C19.3132 9.95672 18.6176 10.8087 17.8269 11.5509L19.4283 13.1522C19.6885 13.4125 19.6885 13.8347 19.4283 14.0951C19.1679 14.3553 18.7457 14.3553 18.4855 14.0951L16.8015 12.411C15.74 13.2039 14.5452 13.8163 13.245 14.2015L13.844 16.4371C13.9392 16.7927 13.7281 17.1581 13.3725 17.2535C13.0169 17.3488 12.6513 17.1377 12.5561 16.7821L11.9456 14.5035C11.3166 14.6108 10.6671 14.6667 10 14.6667C9.33287 14.6667 8.68343 14.6108 8.05443 14.5035L7.44399 16.782C7.34871 17.1377 6.98316 17.3488 6.62752 17.2535C6.27187 17.1583 6.0608 16.7927 6.15608 16.4371L6.755 14.2015C5.45481 13.8163 4.26004 13.2039 3.19853 12.411L1.51453 14.0951C1.25418 14.3553 0.832077 14.3553 0.571731 14.0951C0.311383 13.8347 0.311383 13.4125 0.571731 13.1522L2.17309 11.5509C1.38243 10.8087 0.686817 9.95671 0.101424 9.02008C-0.0937156 8.70787 0.00119803 8.29656 0.31342 8.10143C0.625641 7.90628 1.03694 8.0012 1.23208 8.31343C1.87139 9.33632 2.652 10.2409 3.54977 10.9904C3.5642 11.0014 3.57827 11.0131 3.59196 11.0255C5.34529 12.4738 7.54049 13.3334 10 13.3334C13.7437 13.3334 16.8752 11.3419 18.768 8.31341C18.9631 8.0012 19.3744 7.90628 19.6865 8.10143Z" fill="#E3E3E3"/>
+                    </svg>        
+                    <svg data-eye-close width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10 10.6667C6.4038 10.6667 3.37269 8.82912 1.46163 6.00001C3.37269 3.17088 6.4038 1.33333 10 1.33333C13.5961 1.33333 16.6273 3.17088 18.5384 6.00001C16.6273 8.82911 13.5961 10.6667 10 10.6667ZM10 0C5.74381 0 2.20852 2.27517 0.101334 5.64668C-0.0337784 5.86287 -0.0337779 6.13717 0.101335 6.35335C2.20852 9.7248 5.74381 12 10 12C14.2561 12 17.7915 9.7248 19.8987 6.35335C20.0337 6.13717 20.0337 5.86287 19.8987 5.64668C17.7915 2.27517 14.2561 0 10 0ZM10 8.66667C11.4728 8.66667 12.6667 7.47276 12.6667 6C12.6667 4.52724 11.4728 3.33333 10 3.33333C8.52724 3.33333 7.33333 4.52724 7.33333 6C7.33333 7.47276 8.52724 8.66667 10 8.66667Z" fill="#E3E3E3"/>
+                    </svg>                
+                </div>
+                <div>
+                    <h3 class="font-medium">Che modalità di lavoro offri per i progetti?</h3>
+                    <p class="mt-4 hidden text-gray/80">Lavoro 100% da remoto, ma sono disponibile per incontri fisici nelle aree di <span class="font-medium px-1 bg-green-dark text-green uppercase text-xs">Milano</span> e <span class="font-medium px-1 bg-green-dark text-green uppercase text-sm">Bergamo</span> su richiesta.</p>
+                </div>
+            </div>
+
+            <div data-faq-3 class="flex items-start gap-8 rounded-xl w-full cursor-pointer max-sm:gap-4">
+                <div class="min-w-[20px] min-h-[20px] flex items-center max-sm:mt-[2px]">
+                    <svg data-eye-open class="absolute opacity-0" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M19.6865 8.10143C19.9988 8.29656 20.0937 8.70787 19.8985 9.02008C19.3132 9.95672 18.6176 10.8087 17.8269 11.5509L19.4283 13.1522C19.6885 13.4125 19.6885 13.8347 19.4283 14.0951C19.1679 14.3553 18.7457 14.3553 18.4855 14.0951L16.8015 12.411C15.74 13.2039 14.5452 13.8163 13.245 14.2015L13.844 16.4371C13.9392 16.7927 13.7281 17.1581 13.3725 17.2535C13.0169 17.3488 12.6513 17.1377 12.5561 16.7821L11.9456 14.5035C11.3166 14.6108 10.6671 14.6667 10 14.6667C9.33287 14.6667 8.68343 14.6108 8.05443 14.5035L7.44399 16.782C7.34871 17.1377 6.98316 17.3488 6.62752 17.2535C6.27187 17.1583 6.0608 16.7927 6.15608 16.4371L6.755 14.2015C5.45481 13.8163 4.26004 13.2039 3.19853 12.411L1.51453 14.0951C1.25418 14.3553 0.832077 14.3553 0.571731 14.0951C0.311383 13.8347 0.311383 13.4125 0.571731 13.1522L2.17309 11.5509C1.38243 10.8087 0.686817 9.95671 0.101424 9.02008C-0.0937156 8.70787 0.00119803 8.29656 0.31342 8.10143C0.625641 7.90628 1.03694 8.0012 1.23208 8.31343C1.87139 9.33632 2.652 10.2409 3.54977 10.9904C3.5642 11.0014 3.57827 11.0131 3.59196 11.0255C5.34529 12.4738 7.54049 13.3334 10 13.3334C13.7437 13.3334 16.8752 11.3419 18.768 8.31341C18.9631 8.0012 19.3744 7.90628 19.6865 8.10143Z" fill="#E3E3E3"/>
+                    </svg>        
+                    <svg data-eye-close width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10 10.6667C6.4038 10.6667 3.37269 8.82912 1.46163 6.00001C3.37269 3.17088 6.4038 1.33333 10 1.33333C13.5961 1.33333 16.6273 3.17088 18.5384 6.00001C16.6273 8.82911 13.5961 10.6667 10 10.6667ZM10 0C5.74381 0 2.20852 2.27517 0.101334 5.64668C-0.0337784 5.86287 -0.0337779 6.13717 0.101335 6.35335C2.20852 9.7248 5.74381 12 10 12C14.2561 12 17.7915 9.7248 19.8987 6.35335C20.0337 6.13717 20.0337 5.86287 19.8987 5.64668C17.7915 2.27517 14.2561 0 10 0ZM10 8.66667C11.4728 8.66667 12.6667 7.47276 12.6667 6C12.6667 4.52724 11.4728 3.33333 10 3.33333C8.52724 3.33333 7.33333 4.52724 7.33333 6C7.33333 7.47276 8.52724 8.66667 10 8.66667Z" fill="#E3E3E3"/>
+                    </svg>                
+                </div>
+                <div>
+                    <h3 class="font-medium">Quali tempistiche prevedi per la realizzazione di un sito?</h3>
+                    <p class="mt-4 hidden text-gray/80">Le tempistiche dipendono dalla complessità del progetto. Solitamente, un sito semplice può essere completato in 2 settimane, mentre progetti più complessi possono richiedere più tempo. Dopo una prima consulenza, sarà possibile fornire una stima dettagliata.</p>
+                </div>
+            </div>
+
+            <div data-faq-4 class="flex items-start gap-8 rounded-xl w-full cursor-pointer max-sm:gap-4">
+                <div class="min-w-[20px] min-h-[20px] flex items-center max-sm:mt-[2px]">
+                    <svg data-eye-open class="absolute opacity-0" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M19.6865 8.10143C19.9988 8.29656 20.0937 8.70787 19.8985 9.02008C19.3132 9.95672 18.6176 10.8087 17.8269 11.5509L19.4283 13.1522C19.6885 13.4125 19.6885 13.8347 19.4283 14.0951C19.1679 14.3553 18.7457 14.3553 18.4855 14.0951L16.8015 12.411C15.74 13.2039 14.5452 13.8163 13.245 14.2015L13.844 16.4371C13.9392 16.7927 13.7281 17.1581 13.3725 17.2535C13.0169 17.3488 12.6513 17.1377 12.5561 16.7821L11.9456 14.5035C11.3166 14.6108 10.6671 14.6667 10 14.6667C9.33287 14.6667 8.68343 14.6108 8.05443 14.5035L7.44399 16.782C7.34871 17.1377 6.98316 17.3488 6.62752 17.2535C6.27187 17.1583 6.0608 16.7927 6.15608 16.4371L6.755 14.2015C5.45481 13.8163 4.26004 13.2039 3.19853 12.411L1.51453 14.0951C1.25418 14.3553 0.832077 14.3553 0.571731 14.0951C0.311383 13.8347 0.311383 13.4125 0.571731 13.1522L2.17309 11.5509C1.38243 10.8087 0.686817 9.95671 0.101424 9.02008C-0.0937156 8.70787 0.00119803 8.29656 0.31342 8.10143C0.625641 7.90628 1.03694 8.0012 1.23208 8.31343C1.87139 9.33632 2.652 10.2409 3.54977 10.9904C3.5642 11.0014 3.57827 11.0131 3.59196 11.0255C5.34529 12.4738 7.54049 13.3334 10 13.3334C13.7437 13.3334 16.8752 11.3419 18.768 8.31341C18.9631 8.0012 19.3744 7.90628 19.6865 8.10143Z" fill="#E3E3E3"/>
+                    </svg>        
+                    <svg data-eye-close width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10 10.6667C6.4038 10.6667 3.37269 8.82912 1.46163 6.00001C3.37269 3.17088 6.4038 1.33333 10 1.33333C13.5961 1.33333 16.6273 3.17088 18.5384 6.00001C16.6273 8.82911 13.5961 10.6667 10 10.6667ZM10 0C5.74381 0 2.20852 2.27517 0.101334 5.64668C-0.0337784 5.86287 -0.0337779 6.13717 0.101335 6.35335C2.20852 9.7248 5.74381 12 10 12C14.2561 12 17.7915 9.7248 19.8987 6.35335C20.0337 6.13717 20.0337 5.86287 19.8987 5.64668C17.7915 2.27517 14.2561 0 10 0ZM10 8.66667C11.4728 8.66667 12.6667 7.47276 12.6667 6C12.6667 4.52724 11.4728 3.33333 10 3.33333C8.52724 3.33333 7.33333 4.52724 7.33333 6C7.33333 7.47276 8.52724 8.66667 10 8.66667Z" fill="#E3E3E3"/>
+                    </svg>              
+                </div>
+                <div>
+                    <h3 class="font-medium">Come posso contattarti?</h3>
+                    <p class="mt-4 hidden text-gray/80">Puoi inviarmi una mail a <span class="font-medium px-1 bg-green-dark text-green uppercase text-xs">hello@diegomantegazza.me</span>. Sarò felice di rispondere a qualsiasi domanda o richiesta.</p>
+                </div>
+            </div>
+
+            <div class="w-full mt-16 flex justify-end">
+                <span class="uppercase text-gray/40 font-light text-sm">[07] &nbsp;&nbsp; FAQ</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    import { gsap } from "gsap";
+    import { ScrollTrigger } from "gsap/all";
+    import { TextPlugin } from "gsap/TextPlugin";
+    gsap.registerPlugin(ScrollTrigger, TextPlugin);
+
+    gsap.from('[data-faq-title]', {
+        text: '€1#?+9*',
+        scrollTrigger: {
+            trigger: '[data-faq-title]',
+            start: 'bottom bottom',
+            end: 'center center',
+            scrub: true
+        }
+    })
+
+    let isOpen = [true, false, false, false, false, false]
+    const setFAQ = (index:number) => {
+        if(isOpen[index]){
+            gsap.to(`[data-faq-${index}] [data-eye-open]`, {opacity: 0, duration: .2})
+            gsap.to(`[data-faq-${index}] [data-eye-close]`, { opacity: 1, duration: .2})
+            gsap.to(`[data-faq-${index}] p`, { opacity: 0, display: 'none', duration: .2})
+            isOpen[index] = false;
+        }else{
+            gsap.to(`[data-faq-${index}] [data-eye-open]`, {opacity: 1, duration: .2})
+            gsap.to(`[data-faq-${index}] [data-eye-close]`, { opacity: 0, duration: .2})
+            gsap.to(`[data-faq-${index}] p`, { opacity: 1, display: 'block', duration: .2})
+            isOpen[index] = true;
+        }
+    }
+
+    for(let i = 0; i < 5; i++){
+        document.querySelector(`[data-faq-${i}]`)?.addEventListener('click', () => setFAQ(i))
+    }
+</script>

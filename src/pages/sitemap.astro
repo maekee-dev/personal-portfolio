@@ -1,0 +1,42 @@
+---
+import Base from "@layouts/Base.astro";
+---
+
+<Base title="Sitemap" description="Sitemap" noIndex={true}>
+    <main class="max-w-[1920px] w-full px-normal z-20 mt-56 flex items-center flex-col max-md:items-start max-md:mt-40">
+        <h2 class="text-6xl font-robit font-normal max-md:text-5xl">Website <span class="font-medium">Sitemap</span></h2>
+        <div class="mt-12 flex items-center flex-wrap gap-4 max-w-[800px] max-md:mt-8">
+            <a href="/" class="px-4 py-2 font-medium bg-green-dark text-green text-lg uppercase rounded-md transition-colors border border-green-dark hover:border-green/40">Homepage</a>
+            <a href="/" class="px-4 py-2 font-medium bg-green-dark text-green text-lg uppercase rounded-md transition-colors border border-green-dark hover:border-green/40">Progetti</a>
+            <a href="/" class="px-4 py-2 font-medium bg-green-dark text-green text-lg uppercase rounded-md transition-colors border border-green-dark hover:border-green/40">Privacy</a>
+            <a href="/" class="px-4 py-2 font-medium bg-green-dark text-green text-lg uppercase rounded-md transition-colors border border-green-dark hover:border-green/40">Sitemap</a>
+        </div>
+    </main>
+</Base>
+
+<script>
+    import { gsap } from "gsap/gsap-core";
+    import { TextPlugin } from "gsap/all";
+    gsap.registerPlugin(TextPlugin);
+
+    const heroTl = gsap.timeline({ paused: true })
+    //heroTl.from('#heroTitle span', { opacity: 0, y: 200})
+    heroTl.from('#progettiTitle', {text: '#9*$è+'}, '-=.6')
+    .from('#progettiBlur', {opacity: 0, duration: .6, delay: .2}, '-=.4')
+    .from('#progettiImageContainer [data-progetti-image]', {
+        opacity: 0,
+        stagger: .4
+    }, '-=.4')
+    .from('#privacyBanner', {opacity: 0, x: 20}, '-=1.2')
+
+    window.addEventListener("load", () => {
+        document.body.style.overflowY = 'auto'
+        const loadingTl = gsap.timeline({
+            ease: 'none',
+            onComplete: () => {heroTl.play(0)}
+        })
+        loadingTl.to('#textLoading span', { text: '.', border: 'none', stagger: .05}, '-=.4')
+        loadingTl.to(['#loadingBr', '#textLoading p'], {opacity: 0, display: 'none'}, '-=.10')
+        loadingTl.to('#loadingContainer', {opacity: 0, display: 'none'})
+    })
+</script>
