@@ -10,14 +10,10 @@ export default defineConfig({
     adapter: cloudflare(),
     integrations: [sitemap({
         lastmod: new Date(),
-        filter: page => page !== 'https://diegomantegazza.me/privacy/',
-        i18n: {
-          defaultLocale: 'it',
-          /*locales: {
-            en: 'en-US',
-            it: 'it-IT'
-          }*/
-        }
+        filter: (page) => 
+          page !== 'https://diegomantegazza.me/privacy/' &&
+          page !== 'https://diegomantegazza.me/sitemap/' &&
+          page !== 'https://diegomantegazza.me/success/',
       })
     ],
     vite: {
