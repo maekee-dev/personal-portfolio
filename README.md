@@ -1,5 +1,5 @@
 # Personal Portfolio
-Questa repository contiene tutti i file relativi al sito web [diegomantegazza.me](https://edilmantegazza.it).
+Questa repository contiene tutti i file relativi al sito web [diegomantegazza.me](https://diegomantegazza.me).
 
 ![Logo](./public/og-image.png)
 
