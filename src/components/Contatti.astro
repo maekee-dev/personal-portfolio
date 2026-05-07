@@ -35,38 +35,38 @@ import contattiImage from "@images/contatti.gif";
             <div class="flex gap-4 w-full max-md:flex-col">
                 <div class="flex flex-col w-1/2 max-md:w-full">
                     <label for="nome" class="text-xs text-green uppercase">Nome / Nome Azienda (*)</label>
-                    <input required type="text" id="nome" name="nome" placeholder="Tyrell Corporation" class="mt-2 h-[50px] px-4 rounded-lg text-sm placeholder-gray/40 bg-main font-geist-mono  border border-gray/80" />
+                    <input disabled required type="text" id="nome" name="nome" placeholder="Tyrell Corporation" class="mt-2 h-[50px] px-4 rounded-lg text-sm placeholder-gray/40 bg-main font-geist-mono  border border-gray/80" />
                 </div>
                 <div class="flex flex-col w-1/2 max-md:w-full">
                     <label for="email" class="text-xs text-green uppercase">Email (*)</label>
-                    <input required type="email" id="email" name="email" placeholder="info@tyrellcorporation.com" class="mt-2 h-[50px] px-4 rounded-lg text-sm bg-main placeholder-gray/40 font-geist-mono  border border-gray/80" />
+                    <input disabled required type="email" id="email" name="email" placeholder="info@tyrellcorporation.com" class="mt-2 h-[50px] px-4 rounded-lg text-sm bg-main placeholder-gray/40 font-geist-mono  border border-gray/80" />
                 </div>
             </div>
             <div class="flex flex-col w-full">
                 <label for="richiesta" class="text-xs text-green uppercase">Richiesta</label>
-                <select id="richiesta" name="richiesta" class="mt-2 h-[50px] px-4 rounded-lg text-sm placeholder-gray/40 font-geist-mono  border bg-main border-gray/80">
+                <select disabled id="richiesta" name="richiesta" class="mt-2 h-[50px] px-4 rounded-lg text-sm placeholder-gray/40 font-geist-mono  border bg-main border-gray/80">
                     <option value="informazioni" selected>Informazioni</option>
                     <option value="sviluppo">Sviluppo</option>
                 </select>
             </div>
             <div class="flex flex-col w-full">
                 <label for="messaggio" class="text-xs text-green uppercase">Messaggio / Descrizione Progetto (*)</label>
-                <textarea required id="messaggio" name="messaggio" class="mt-2 h-[150px] p-4 rounded-lg text-sm placeholder-gray/40 font-geist-mono  border bg-main border-gray/80 resize-none"
+                <textarea disabled required id="messaggio" name="messaggio" class="mt-2 h-[150px] p-4 rounded-lg text-sm placeholder-gray/40 font-geist-mono  border bg-main border-gray/80 resize-none"
                 placeholder="Vorrei sviluppare un'interfaccia per operazioni fuori protocollo. Progetto Nexus. Specifiche riservate. Encryption consigliata."></textarea>
             </div>
             <div class="flex gap-4 w-full">
                 <div class="flex flex-col w-1/2">
                     <label for="url" class="text-xs text-green uppercase">Hai già un sito?</label>
-                    <input type="url" id="url" name="website" placeholder="https://tyrellcorporation.com" class="mt-2 h-[50px] px-4 rounded-lg text-sm placeholder-gray/40 bg-main font-geist-mono  border border-gray/80" />
+                    <input disabled type="url" id="url" name="website" placeholder="https://tyrellcorporation.com" class="mt-2 h-[50px] px-4 rounded-lg text-sm placeholder-gray/40 bg-main font-geist-mono  border border-gray/80" />
                 </div>
                 <div class="flex flex-col w-1/2">
                     <label for="referral" class="text-xs text-green uppercase">Come mi hai trovato?</label>
-                    <input type="text" id="referral" name="referral" placeholder="Contatto ricevuto da un amico" class="mt-2 h-[50px] px-4 rounded-lg text-sm placeholder-gray/40 bg-main font-geist-mono  border border-gray/80" />
+                    <input disabled type="text" id="referral" name="referral" placeholder="Contatto ricevuto da un amico" class="mt-2 h-[50px] px-4 rounded-lg text-sm placeholder-gray/40 bg-main font-geist-mono  border border-gray/80" />
                 </div>
             </div>
             <div class="flex items-center gap-2 w-full mt-2">
                 <div class="flex items-center cursor-pointer relative">
-                    <input required type="checkbox" name="privacy" class="peer h-4 w-4 cursor-pointer transition-all appearance-none rounded-[4px] border bg-main border-gray/80 checked:bg-green checked:border-green" id="privacy" />
+                    <input disabled required type="checkbox" name="privacy" class="peer h-4 w-4 cursor-pointer transition-all appearance-none rounded-[4px] border bg-main border-gray/80 checked:bg-green checked:border-green" id="privacy" />
                     <span class="absolute text-main opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none">
                       <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1">
                         <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
@@ -76,7 +76,7 @@ import contattiImage from "@images/contatti.gif";
                 <label for="privacy" class="text-xs uppercase pt-[.2rem] text-gray/80">Accetto il trattamento dei dati come indicato nell'<a href="/privacy" class="underline">informativa sulla privacy</a></label>
             </div>
             <input type="hidden" name="redirectTo" value="https://diegomantegazza.me/success/">
-            <button type="submit" class="cursor-pointer mt-4 w-full h-[50px] border border-green bg-green/10 rounded-md text-green transition-colors hover:bg-green/20">
+            <button disabled type="submit" class="cursor-pointer mt-4 w-full h-[50px] border border-green bg-green/10 rounded-md text-green transition-colors hover:bg-green/20">
                 Invia
             </button>
         </form>
